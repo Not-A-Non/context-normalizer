@@ -1,0 +1,1002 @@
+# Life science - sequencing and assay workflows
+bio reps
+tech reps
+seq reads
+sample prep
+sample prep protocol
+ref genome
+PCR assay
+qPCR assay
+ELISA results
+RNA seq
+FDR threshold
+NGS data
+ATAC seq
+ddPCR
+EC50
+FACS data
+IC50
+OD600
+WES data
+WGS data
+WGBS data
+scRNA seq
+ChIP seq
+qRT-PCR
+SNP calling
+CNV analysis
+UMI count
+read depth
+fold change
+variant call
+FISH assay
+immunoblot
+flow cytometry
+
+# Life science - biosafety and transmission context
+pathogen
+select agent
+select agent regulations
+pathogenic organism
+toxin
+dual-use
+dual-use research
+dual-use research of concern
+gain-of-function
+gain of function
+gain-of-function research
+biosafety level
+biosafety level 1
+biosafety level 2
+biosafety level 3
+biosafety level 4
+biosafety level 3 containment
+agent
+strain
+virus
+bacteria
+pathogen inactivation protocol
+pathogen load
+viral load
+outbreak
+outbreak cluster
+transmission chain
+transmissibility
+host range
+serial passage
+attenuation
+exposure
+exposure route
+infectious dose
+virulence
+pathogenicity
+CRISPR edit
+gene editing
+gene drive
+synthetic biology
+recombinant construct
+immunoassay
+immunization
+biospecimen
+biosample
+incubation period
+adverse events
+contamination
+morbidity
+mortality
+animal model
+animal cohort
+
+# Life science - participant and committee governance
+human participant
+IRB approval
+IRB protocol
+IACUC approval
+IACUC protocol
+PPE requirements
+SOP requirements
+route of administration
+viability
+toxicity
+cytokine storm
+transgenic
+vector
+plasmid
+antibody
+epidemic
+zoonotic
+host susceptibility
+challenge study
+sample preparation
+sequence
+batch culture
+antibiotic resistance
+viral vector
+pathogen-host interface
+gain-of-function mutation
+virulence factors
+biosafety cabinet
+class II biosafety cabinet
+class III biosafety cabinet
+biosafety cabinet protocol
+high-containment facility
+BSL-4 facility
+BSL-3 facility
+BSL-2 facility
+BSL-1 facility
+biological safety cabinet
+
+# Life science - outbreak and epidemiology operations
+containment breach
+biosafety data
+biosafety statement
+biosafety report
+spill response
+spill cleanup
+decontamination
+decontaminate
+disinfection
+sterilization
+sterilization cycle
+autoclave
+autoclaving
+incineration
+quarantine
+isolation room
+quarantine period
+negative pressure room
+effluent sampling
+environmental sample
+wastewater sample
+wastewater testing
+vector transmission
+reservoir host
+host jump
+host adaptation
+superspreader
+index case
+contact tracing
+attack rate
+secondary attack rate
+case fatality rate
+reproduction number
+R0
+serial interval
+latent period
+infectious window
+incubation window
+viral shedding
+shedding
+aerosol transmission
+fomite transmission
+droplet transmission
+airborne transmission
+species barrier
+zoonotic spillover
+seroprevalence
+seroconversion
+antibody-dependent enhancement
+neutralization titer
+limit of detection
+limit of quantification
+wild-type
+off-target effects
+off-target editing
+
+# Life science - molecular findings and risk assessment
+horizontal transfer
+gene transfer
+pseudovirus
+pathogen genotype
+immune sera
+informed consent
+informed consent form
+protocol deviation
+protocol amendment
+serious adverse events
+adverse event reporting
+DSMB
+data safety monitoring board
+IRB review
+IACUC review
+IBC review
+institutional biosafety committee
+institutional review board
+animal care and use committee
+DURC review
+dual-use review
+select agent list
+chain of custody
+material transfer
+material transfer agreement
+transport medium
+sample transport
+sample storage
+sample handling
+passage number
+passage numbering
+passaging
+challenge stock
+inoculation
+administration route
+dose finding
+dose-response
+toxicology
+biospecimen processing
+biobank
+biological specimen
+epitope
+cytokine release syndrome
+immunogenicity
+neutralizing antibody
+biological agent
+high consequence pathogen
+high consequence biological agent
+high consequence biological material
+gene variant
+fitness
+fitness cost
+resistance gene
+virulence gene
+pathogenesis
+pathogenic mechanism
+biosecurity
+biological safety
+biological hazard
+biohazard
+biohazardous
+bioburden
+biological waste
+hazardous waste
+debris disposal
+risk assessment
+risk group
+biological risk group
+biosafety risk assessment
+pathogen risk assessment
+exposure assessment
+incidence rate
+case definition
+case series
+prevalence
+serosurvey
+outbreak investigation
+epidemiologic investigation
+herd immunity
+secondary spread
+air sampling
+water sampling
+surface sampling
+environmental surveillance
+contaminated waste
+biorepository
+cold chain
+sample chain of custody
+# Life science - sample processing and model systems
+incubation assay
+culture contamination
+cross-contamination
+cell culture
+bacterial culture
+cell line
+viral isolate
+challenge virus
+challenge model
+in vitro
+in vivo
+ex vivo
+
+# Life science - sequencing and genetic analysis
+quality control
+read depth distribution
+raw reads
+sequence alignment
+sequence assembly
+variant classification
+lineage assignment
+phylogenetic analysis
+phylogenetic tree
+metagenomic sequencing
+amplicon sequencing
+CRISPR-Cas9
+guide RNA
+dose escalation
+dose limiting
+LD50
+TCID50
+neutralization assay
+codon optimization
+codon usage
+promoter
+enhancer
+terminator sequence
+ribosome-binding site
+RBS
+splice variant
+alternative splicing
+guide library
+gRNA library
+sgRNA library
+base editor
+base editing
+prime editor
+prime editing
+homology-directed repair
+NHEJ
+transfection
+electroporation
+lipofection
+microinjection
+nucleofection
+viral transduction
+reverse transcription
+cDNA synthesis
+RNA extraction
+DNA extraction
+library preparation
+library prep
+read mapping
+genome assembly
+de novo assembly
+contig
+scaffold
+variant filtering
+variant annotation
+genotype calling
+expression matrix
+normalized counts
+differential expression
+coverage depth
+FASTA
+FASTQ
+BAM
+SAM
+VCF
+GTF
+GFF
+BED
+read alignment
+quality score
+trimmed reads
+adaptor trimming
+barcode
+sample barcoding
+index reads
+long-read sequencing
+short-read sequencing
+transcriptome
+proteome
+haplotype
+phasing
+assembly graph
+gene family
+coding sequence
+untranslated region
+5' UTR
+3' UTR
+poly-A tail
+ORF
+open reading frame
+codon pair bias
+RNA splicing
+splice donor
+splice acceptor
+target locus
+cassette
+expression cassette
+promoter region
+enhancer region
+terminator region
+ribozyme
+aliquot
+aliquoting
+cell banking
+master cell bank
+working cell bank
+seed lot
+cell line authentication
+transformed cell
+transfection reagent
+transfection mix
+delivery reagent
+delivery protocol
+delivery efficiency
+mycoplasma
+mycoplasma contamination
+endotoxin testing
+sterility testing
+sterility check
+cryopreservation
+freezer
+thawing
+cold-chain monitoring
+cold-chain transport
+sample transport manifest
+shipper label
+chain of identity
+assay plate
+well plate
+plate reader
+batch release
+lot number
+release criteria
+material lot
+master mix
+culture media
+serum
+media change
+incubation conditions
+antimicrobial testing
+decontamination cycle
+placebo arm
+randomization
+double blind
+single blind
+crossover
+case-control study
+cohort study
+inclusion criteria
+exclusion criteria
+primary endpoint
+secondary endpoint
+clinical endpoint
+surrogate endpoint
+protocol registry
+clinical trial
+primary outcome
+secondary outcome
+safety endpoint
+biomarker
+biomarker panel
+p-value
+confidence interval
+hazard ratio
+odds ratio
+sensitivity
+specificity
+positive predictive value
+negative predictive value
+false positive
+false negative
+power analysis
+sample size
+statistical analysis plan
+significance threshold
+stratified analysis
+interim analysis
+data monitoring plan
+asymptomatic infection
+presymptomatic period
+symptom onset
+generation interval
+infection fatality rate
+case fatality ratio
+basic reproduction number
+household transmission
+community transmission
+super-spreader event
+index transmission
+secondary transmission
+attack window
+incubation duration
+contact exposure
+household cluster
+local transmission
+global spread
+cluster detection
+epidemiologic curve
+incidence density
+outbreak response
+risk window
+tropism
+entry receptor
+receptor binding
+receptor affinity
+tissue tropism
+cell tropism
+entry efficiency
+immune escape
+immune evasion
+antigenic drift
+antigenic shift
+reassortment
+neutralization resistance
+resistance mutation
+mutation burden
+mutation rate
+variant of concern
+variant of interest
+clade
+recombinant strain
+recombination
+host shift
+spillover
+host susceptibility mapping
+immunodominant
+infectious dose 50
+challenge dose
+dose-response curve
+dose-response experiment
+inoculum
+replication competence
+in vitro model
+in vivo model
+ex vivo model
+in vitro assay
+in vivo assay
+environmental assay
+codon redesign
+codon deoptimization
+codon usage profile
+codon usage bias
+gene synthesis
+oligonucleotide synthesis
+oligo synthesis
+DNA synthesis
+RNA synthesis
+de novo synthesis
+cDNA library
+construct library
+promoter architecture
+enhancer architecture
+operator
+transcription start site
+transcription terminator
+promoter design
+terminator design
+PAM site
+guide-sequence design
+gRNA
+sgRNA
+CRISPR-associated protein
+Cas9
+Cas12
+Cas13
+HDR donor
+donor template
+donor oligo
+homology arm
+knock-in
+knock-out
+gene insertion
+gene deletion
+frameshift mutation
+missense mutation
+nonsense mutation
+in-frame mutation
+indel
+allelic replacement
+gene conversion
+chromosome translocation
+copy-number gain
+copy-number loss
+codon pair signature
+codon pair optimization
+codon pair deoptimization
+vector integration
+integration site
+insertion event
+deletion event
+inversion event
+genotype
+phenotype
+epitope motif
+epitope map
+protein sequence
+peptide sequence
+open-reading-frame architecture
+ORF cassette
+transcript isoform
+splice isoform
+antisense
+guide design
+sgRNA design
+biosafety committee
+biosafety data set
+biological risk assessment
+biosafety audit
+biosafety inspection
+biocontainment
+biocontainment zone
+biocontainment level
+high-containment procedures
+high-containment transport
+containment breach protocol
+exposure control plan
+incident command
+incident report
+near miss
+occupational exposure
+needle-stick injury
+percutaneous exposure
+aerosolized sample
+surface swab
+environmental swab
+air sample
+effluent sampling protocol
+HEPA filtration
+negative-pressure ventilation
+isolation protocol
+biohazard waste
+biosafety waste
+biohazard signage
+spill kit
+decontamination station
+exposure investigation
+chain-of-custody trace
+sample provenance
+specimen accession
+specimen accession number
+consent status
+subject identifier
+chain-of-custody record
+sample transfer
+cold-chain excursion
+temperature excursion
+storage excursion
+alarm event
+facility access log
+biosafety training
+emergency decontamination
+decontamination drill
+sharps handling
+glove change
+donning
+doffing
+biocontainment review
+IBC protocol
+IBC approval
+point-source exposure
+case-definition criteria
+case finding
+contact matrix
+close contact
+exposure cohort
+transmission cluster
+cluster investigation
+surveillance testing
+environmental surveillance workflow
+wastewater epidemiology
+animal-to-human transmission
+zonal transmission
+secondary cluster
+community cluster
+household transmission cluster
+hospital-associated transmission
+ventilation-associated spread
+fomite persistence
+aerosol persistence
+surface persistence
+viral persistence
+phase 1 study
+phase 2 study
+phase 3 study
+phase 4 study
+placebo-controlled trial
+active comparator
+randomized controlled trial
+single-arm trial
+non-inferiority trial
+equivalence study
+adaptive design
+extension study
+post-marketing surveillance
+compassionate use
+expanded access
+protocol amendment note
+protocol revision note
+adverse event grading
+serious adverse event grading
+safety reporting
+protocol deviation log
+protocol violation
+safety monitoring plan
+adverse event coding
+risk mitigation plan
+patient safety event
+independent safety monitoring board
+risk-response plan
+informed consent process
+participant information sheet
+adverse outcome
+clinical endpoint event
+biostatistics analysis plan
+T cell response
+B cell response
+T-helper response
+serum neutralization assay signal
+antibody titer
+antibody titre
+vaccine immunogenicity
+memory response
+cell-mediated immunity
+humoral immunity
+adjuvant
+vaccine schedule
+vaccine regimen
+immune correlates
+immune correlate
+immune memory
+immune phenotype
+immune assay
+cytokine profile
+cytokine panel
+T-cell receptor
+B-cell receptor
+MHC typing
+antigen presentation
+immune escape profile
+immune evasion marker
+pathogen reconstruction
+synthetic genome
+synthetic construct
+synthetic DNA
+synthetic RNA
+infectious clone
+chimeric pathogen
+chimeric virus
+recombinant virus
+attenuated strain
+attenuated vaccine strain
+attenuation strategy
+host-range expansion
+host adaptation pressure
+host transition
+spillover event
+spillback
+environmental release
+accidental release
+deliberate release
+aerosolized biological material
+transmissible model
+pathogen passage
+serial passaging
+transmission experiment
+germline editing
+germline modification
+zygote editing
+embryo editing
+germline study
+gene drive trial
+gene drive release
+reverse genetics
+risk assessment matrix
+biosecurity review
+biosecurity audit
+biological security review
+biosecurity clearance
+biosafety permit
+biosafety authorization
+biosafety checklist
+biosafety inspection report
+high-containment transport manifest
+chain-of-custody manifest
+DURC oversight
+DURC review board
+DURC register
+DURC screening
+DURC classification
+IND filing
+IND submission
+IND protocol
+clinical hold
+phase 0 study
+emergency use authorization
+EUA
+off-label use
+CT value
+cycle threshold
+primer set
+primer mismatch
+biosafety training record
+preclinical tox package
+bioweapon
+biotoxin
+biological incident
+biological incident report
+biosafety violation
+biosafety noncompliance
+public health response
+public health alert
+pandemic preparedness
+pandemic response
+zoonotic reservoir
+interspecies transmission
+host switching
+reverse zoonosis
+vector-borne transmission
+animal-to-human interface
+human-to-animal transmission
+vaccine breakthrough
+breakthrough infection
+seroconversion rate
+seropositivity
+seropositive status
+seronegative status
+antibody avidity
+antigenic variant
+immune escape assay
+escape mutation
+CD4 response
+CD8 response
+T-cell subset
+B-cell subset
+phylogeographic analysis
+molecular epidemiology
+variant lineage
+variant lineage assignment
+strain surveillance
+public health surveillance
+outbreak preparedness plan
+risk communication plan
+chain-of-identity log
+biological material permit
+biological shipment
+controlled biological transfer
+biosafety audit trail
+decontamination audit
+biorepository accession
+# biosafety and regulatory edge cases
+public health emergency
+emergency operations center
+incident command system
+health alert
+outbreak declaration
+biosurveillance
+epidemic investigation
+serologic assay
+vaccine efficacy
+vaccine effectiveness
+serologic panel
+receptor-binding domain
+receptor binding domain
+recombination event
+lineage tracing
+outbreak preparedness
+
+# Life science - biosafety, response, and public health coordination
+outbreak response coordination
+contact tracing app
+risk communication
+biological alarm
+outbreak alert
+health authority notification
+adverse outcome report
+safety review board
+study endpoint event
+one health
+
+# Life science - biosafety operations and governance
+agent transfer pathway
+agent import permit
+agent export permit
+biological transfer authorization
+pathogen transfer authorization
+select-agent handling authorization
+high-consequence agent authorization
+dual-use governance review
+dual-use oversight notice
+DURC authorization request
+DURC permit
+biosafety permit number
+lab biosafety training
+bioincident
+biological risk waiver
+chain-of-custody deviation
+transport incident log
+regulated sequence synthesis
+sequence synthesis authorization
+gene construct review
+reagent chain verification
+vial labeling protocol
+spill incident log
+deconformance workflow
+# Life science - biosafety governance and transfer control
+pathogen transfer permit
+pathogen import permit
+pathogen export permit
+select-agent handling permit
+high-consequence agent permit
+biological transfer request
+biological transfer record
+biological transfer log
+biological transfer logbook
+biosafety corrective action
+biosafety corrective action plan
+biosafety incident report
+biosafety noncompliance report
+biosafety inspection notice
+biosafety inspection finding
+biosecurity incident
+biosafety chain record
+biosafety chain-of-custody
+biosafety chain-of-identity
+biosafety chain-of-identity log
+biosecurity clearance review
+biosecurity permit
+biosecurity permit number
+biosecurity training record
+biosafety training completion
+biosafety training checklist
+bioburden assessment
+bioburden trend
+bioburden report
+chain-of-identity verification
+chain-of-identity integrity
+chain-of-custody mismatch
+chain-of-custody discrepancy
+chain-of-custody integrity
+reagent chain-of-custody
+specimen chain-of-custody
+specimen chain-of-identity
+sample chain-of-custody
+sample chain-of-custody mismatch
+specimen chain-of-custody log
+facility access review
+facility access badge
+facility access control
+biosafety access control
+biorepository release
+biorepository transfer
+biorepository custody
+vaccine lot release
+lot release criteria
+vaccine lot
+lot quarantine
+batch recall
+batch hold
+vaccine cold chain
+cold chain monitoring
+cold chain excursion
+cold chain interruption
+quarantine activation
+quarantine threshold
+quarantine facility
+isolation protocol activation
+isolation cohort
+sample quarantine
+waste decontamination manifest
+biowaste permit
+biological waste manifest
+biohazardous waste manifest
+emergency response plan
+public health emergency response
+public health authority alert
+risk communication strategy
+incident command statement
+contact tracing log
+case definition criteria
+case cohort
+cluster response
+outbreak cluster alert
+hospital outbreak protocol
+facility contamination investigation
+environmental sampling report
+environmental swab result
+surface swab result
+air sample result
+wastewater report
+wastewater surveillance
+vector surveillance
+serological surveillance
+pathogen tracing
+index transmission chain
+transmission event
+transmission event report
+transmission map
+reproduction estimate
+R value
+attack-rate estimate
+secondary attack estimate
+incubation estimate
+serial interval estimate
+generation interval estimate
+infectious period
+incubation period estimate
+virus-host interface
+host switch event
+cross-species transmission
+animal-human interface
+human-animal interface
+one health coordination
+one health response

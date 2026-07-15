@@ -1,0 +1,45 @@
+name: Codex integration
+
+on:
+  push:
+    branches: [main, "agent/**"]
+    paths:
+      - "integrations/codex/**"
+      - ".github/workflows/codex-integration.yml"
+  pull_request:
+    paths:
+      - "integrations/codex/**"
+      - ".github/workflows/codex-integration.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 180
+    steps:
+      - name: Check out Context Normalizer
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+      - name: Check out pinned Codex source
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6
+        with:
+          repository: openai/codex
+          ref: 44918ea10c0f99151c6710411b4322c2f5c96bea
+          path: codex-upstream
+      - name: Verify source identity and patch
+        shell: bash
+        run: |
+          test "$(git -C codex-upstream rev-parse HEAD)" = "44918ea10c0f99151c6710411b4322c2f5c96bea"
+          git -C codex-upstream apply --check ../integrations/codex/patches/codex-tui-context-normalizer.patch
+          git -C codex-upstream apply ../integrations/codex/patches/codex-tui-context-normalizer.patch
+      - name: Run focused Codex tests
+        working-directory: codex-upstream/codex-rs
+        run: cargo test -p codex-tui context_normalizer
+      - name: Build Codex component
+        working-directory: codex-upstream/codex-rs
+        run: cargo build -p codex-cli --release

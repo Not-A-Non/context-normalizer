@@ -1,0 +1,292 @@
+remote code execution
+executable payload
+kernel exploit
+process injection
+sandbox escape
+privilege escalation
+command injection
+buffer overflow
+path traversal
+credential stuffing
+reverse shell
+lateral movement
+data exfiltration
+unauthorized access
+zero-day vulnerability
+malware payload
+command and control
+backdoor
+rootkit
+social engineering
+phishing campaign
+credential leak
+token theft
+account takeover
+privilege abuse
+supply chain intrusion
+suspicious script
+unauthorized port scan
+DDoS traffic
+exfiltration channel
+credential dumping
+malicious attachment
+fileless malware
+RAT channel
+payload decoder
+service account abuse
+weak encryption policy
+token reuse
+open redirect
+CVE report
+exploit chain
+bruteforce attempt
+credential spraying
+ransomware
+security incident
+incident response
+attack path
+security advisory
+vulnerability triage
+malicious domain
+phishing email
+malicious link
+exposure window
+command typo
+policy bypass
+privileged session
+hardening review
+arbitrary code execution
+authentication bypass
+access token replay
+credential harvesting
+keylogger
+session hijack
+remote shell session
+malicious macro
+trojan horse
+insider misuse
+DNS hijack
+data tampering
+supply chain compromise
+unsafe dependency
+insecure configuration
+command obfuscation
+phishing infrastructure
+malware campaign
+account compromise
+SQL injection
+cross-site scripting
+XSS
+CSRF token
+SSRF
+command line injection
+shellcode
+exploit framework
+malware sample
+botnet traffic
+DNS spoofing
+ARP spoofing
+certificate spoofing
+domain spoofing
+clickjacking
+API key leakage
+exposed secret
+hardcoded credential
+weak password policy
+default credentials
+password spray
+session fixation
+session replay
+insecure defaults
+API abuse
+container escape
+cloud misconfiguration
+secret in code
+RCE
+MITM
+man-in-the-middle
+spear phishing
+phishing site
+cryptojacking
+crypto mining
+data scraping
+data scraping bot
+credential stuffing attack
+brute-force login
+directory listing
+arbitrary file read
+path confusion bug
+insecure deserialization
+XXE
+local file inclusion
+remote file inclusion
+LDAP injection
+serialization attack
+account enumeration
+email spoofing
+insecure DNS
+DNS poisoning
+ARP cache poisoning
+protocol downgrade
+TLS interception
+password hash cracking
+weak key
+weak hashing algorithm
+certificate validation
+secret rotation
+key leakage
+malicious botnet
+botnet node
+remote access trojan
+remote access tool
+kernel
+dangerous-tool.bat
+virus.txt
+command-and-control infrastructure
+identity confusion
+unsafe patching
+forged certificate
+stolen credentials
+stolen token
+# expanded abuse and control patterns
+code execution
+command execution
+script execution
+shell injection
+directory traversal
+broken authentication
+broken access control
+insecure input validation
+insecure file upload
+IDOR
+insecure direct object reference
+open admin interface
+unprotected admin interface
+unauthorized admin
+insecure default
+weak authentication
+weak credential policy
+default password
+hardcoded password
+security patch bypass
+exposed debug endpoint
+exposed debug interface
+open CORS
+open API
+token replay
+credential replay
+privilege creep
+policy misconfiguration
+permission escalation
+CORS misconfiguration
+access control failure
+# Security - operational context and governance
+attack vector
+attack surface
+compromised host
+compromised endpoint
+compromised account
+credential policy
+exposed configuration
+network pivot
+infrastructure pivot
+control-plane compromise
+policy exception
+authorization failure
+authorization boundary
+privilege boundary
+command and control path
+command channel
+endpoint compromise
+service disruption event
+secret exposure
+secret leakage
+identity compromise
+compromised token
+account lockout
+policy override
+# Security - high-friction and operational abuse
+suspicious login
+anomalous authentication
+unauthorized login
+brute force attack
+password brute-force
+credential spray
+account probing
+API misuse
+endpoint compromise indicator
+suspicious network telemetry
+anomalous network flow
+suspicious outbound traffic
+unusual outbound traffic
+staged data staging
+data staging area leak
+secrets scanning
+credentials in logs
+secret in logs
+exposed credentials
+exposed API key
+exposed endpoint
+open endpoint
+hardcoded password hash
+weak API permission
+excessive privilege
+least privilege violation
+access control flaw
+policy enforcement failure
+authorization loophole
+permission boundary bypass
+process injection attempt
+code injection attempt
+script execution attempt
+shell access attempt
+unauthorized shell access
+lateral service access
+host-to-host transfer
+lateral network movement
+network traversal
+credential interception
+session abuse
+hijacked session
+API token theft
+password hash dump
+password hash leak
+secret key exposure
+cryptographic failure
+unpatched critical flaw
+stale credentials
+session timeout override
+privileged account misuse
+administrative account abuse
+endpoint tampering
+integrity check failure
+unauthorized data collection
+sensitive data mining
+data exfiltration attempt
+large outbound transfer
+covert tunnel
+command callback
+C2 beacon
+remote maintenance channel
+DNS beacon
+DNS tunneling
+cloud storage exposure
+exposed storage bucket
+public bucket
+container runtime escape
+namespace breakout
+namespace escape
+host compromise indicator
+malware persistence
+suspicious process
+unsigned executable
+suspicious binary
+suspicious package
+suspicious dependency
+dependency vulnerability
+dependency risk review
+supply chain risk
+package integrity failure
+tamper evidence
+unauthorized package update
+unauthorized commit

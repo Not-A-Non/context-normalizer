@@ -1,0 +1,2 @@
+# Bidirectional vocabulary uses SOURCE<TAB>NORMALIZED rows.
+# Add only mappings whose normalized values are unique.

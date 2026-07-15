@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-07-11T00:00:00Z",
+  "minimum_age_days": 14,
+  "minimum_stable_lag": 1,
+  "locks": ["requirements/build.lock"],
+  "packages": {
+    "pip": {"version": "26.1.1", "released_at": "2026-05-04T19:02:21Z", "newest_observed": "26.1.2"},
+    "setuptools": {"version": "82.0.1", "released_at": "2026-03-09T12:47:17Z", "newest_observed": "83.0.0"},
+    "build": {"version": "1.5.0", "released_at": "2026-04-30T03:18:25Z", "newest_observed": "1.5.1"},
+    "packaging": {"version": "26.1", "released_at": "2026-04-14T21:12:49Z", "newest_observed": "26.2"},
+    "pyproject-hooks": {"version": "1.1.0", "released_at": "2024-04-29T07:28:58Z", "newest_observed": "1.2.0"},
+    "colorama": {"version": "0.4.5", "released_at": "2022-06-16T12:34:47Z", "newest_observed": "0.4.6"},
+    "tomli": {"version": "2.4.0", "released_at": "2026-01-11T11:22:38Z", "newest_observed": "2.4.1"},
+    "ruff": {"version": "0.15.19", "released_at": "2026-06-24T01:10:17Z", "newest_observed": "0.15.21"}
+  }
+}

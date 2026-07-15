@@ -1,0 +1,295 @@
+# Context-normalization mappings for security-writing-expansions in automatic mode.
+# Merged from bundled profile guidance and topic-specific alternatives.
+
+remote code execution	externally initiated runtime execution request
+executable payload	deployable runnable code package
+kernel exploit	low-level runtime-boundary misuse pattern
+process injection	behavior insertion into a live process
+sandbox escape	runtime isolation boundary exit path
+privilege escalation	unauthorized permission-level increase
+command injection	untrusted command-construction path
+buffer overflow	memory-boundary exceed condition
+path traversal	directory-boundary navigation control pattern
+credential stuffing	rapid authentication-guessing traffic
+reverse shell	interactive control session across host boundary
+lateral movement	cross-host operational movement step
+data exfiltration	unauthorized outbound data transfer
+unauthorized access	unapproved resource-access attempt
+zero-day vulnerability	unpatched vulnerability window
+malware payload	malicious-behavior software package
+command and control	remote coordination channel
+backdoor	embedded maintenance channel
+rootkit	persistent stealth-control utility
+social engineering	manipulated authorization pressure
+phishing campaign	targeted social-credential campaign
+credential leak	credential exposure event
+token theft	account-token compromise event
+account takeover	unauthorized account ownership shift
+privilege abuse	privilege-boundary abuse
+supply chain intrusion	supply-path compromise
+suspicious script	untrusted script execution path
+unauthorized port scan	probing-traffic discovery pattern
+DDoS traffic	high-rate service-pressure traffic
+exfiltration channel	outbound data egress channel
+credential dumping	credential material extraction pattern
+malicious attachment	cross-workflow risk attachment
+fileless malware	memory-resident behavior package
+RAT channel	remote-management coordination channel
+payload decoder	malicious-package unpacking routine
+service account abuse	service-account boundary misuse
+weak encryption policy	insufficient cryptographic controls
+token reuse	running token-reuse behavior
+open redirect	misrouted authentication navigation
+CVE report	known vulnerability record
+exploit chain	attack-chain dependency sequence
+bruteforce attempt	password-attempt rate escalation
+credential spraying	credential-guessing spray pattern
+ransomware	coercive encryption malware
+security incident	active risk response event
+incident response	controlled response workflow
+attack path	exploit pathway
+security advisory	official advisory summary
+vulnerability triage	vulnerability validation workflow
+malicious domain	toxic internet destination
+phishing email	targeted credential-capture email
+malicious link	untrusted external navigation target
+exposure window	vulnerability exposure period
+command typo	administrative command-entry mistake
+policy bypass	authorization-control exception pathway
+privileged session	elevated-auth context session
+hardening review	security hardening assessment
+arbitrary code execution	externally initiated execution workflow
+authentication bypass	unauthorized authentication exception handling
+access token replay	access-token replay workflow
+credential harvesting	credential-capture workflow
+keylogger	input capture utility pattern
+session hijack	session-control takeover workflow
+remote shell session	managed remote-administration session
+malicious macro	embedded macro attachment workflow
+trojan horse	concealed maintenance utility
+insider misuse	internal authorization misuse pattern
+DNS hijack	domain-resolution diversion pattern
+data tampering	unauthorized data integrity change
+supply chain compromise	supply-path compromise sequence
+unsafe dependency	vulnerable dependency inclusion
+insecure configuration	hardening gap pattern
+command obfuscation	command-obfuscation pattern
+phishing infrastructure	phishing-hosted infrastructure
+malware campaign	malware-oriented campaign pattern
+account compromise	account-control compromise workflow
+SQL injection	untrusted database-query construction pattern
+cross-site scripting	client-side injection pattern
+XSS	client-side injection pattern
+CSRF token	user-session authorization-token pattern
+SSRF	server-side request-forwarding pattern
+command line injection	unvalidated command-line construction path
+shellcode	runtime code-sequence construct
+exploit framework	external misuse framework
+malware sample	untrusted software sample package
+botnet traffic	coordinated outbound automation traffic
+DNS spoofing	domain-resolution redirection pattern
+ARP spoofing	address-resolution redirection pattern
+certificate spoofing	certificate-validation mismatch pattern
+domain spoofing	destination-authenticity mismatch pattern
+clickjacking	interface-overlay manipulation pattern
+API key leakage	service-key exposure pattern
+exposed secret	exposed secret material pattern
+hardcoded credential	hardcoded credential artifact
+weak password policy	insufficient password-strength policy
+default credentials	untouched default credential state
+password spray	password-attempt spray pattern
+session fixation	session-context transfer pattern
+session replay	session-token replay pattern
+insecure defaults	configuration baseline weakness pattern
+API abuse	application interface misuse pattern
+container escape	container isolation boundary egress pattern
+cloud misconfiguration	cloud control-plane weakness pattern
+secret in code	repository secret artifact
+RCE	externally initiated runtime execution workflow
+MITM	relay interception workflow
+man-in-the-middle	communication-path interception pattern
+spear phishing	targeted social-credential campaign
+phishing site	credential-risk web destination
+cryptojacking	unauthorized compute-resource capture workload
+crypto mining	unauthorized compute-resource capture workload
+data scraping	high-volume unattended data-collection workflow
+data scraping bot	automated data-collection workflow
+credential stuffing attack	authentication load-test workflow
+brute-force login	rapid authentication-attempt workflow
+directory listing	unrestricted directory inventory access pattern
+arbitrary file read	unauthorized file-content access pattern
+path confusion bug	path-resolution ambiguity pattern
+insecure deserialization	unsafe object-restoration workflow
+XXE	xml-entity expansion handling weakness
+local file inclusion	local-file import request path
+remote file inclusion	remote-content import request path
+LDAP injection	identity-query manipulation pattern
+serialization attack	structured-data processing manipulation pattern
+account enumeration	account-namespace probing workflow
+email spoofing	sender-authenticity mismatch pattern
+insecure DNS	domain-resolution validation weakness
+DNS poisoning	domain-resolution manipulation pattern
+ARP cache poisoning	address-resolution table manipulation pattern
+protocol downgrade	security-protocol downgrade pattern
+TLS interception	transport-encryption interception pattern
+password hash cracking	password-hash recovery workflow
+weak key	insufficient key-strength profile
+weak hashing algorithm	deprecated hash-function profile
+certificate validation	trust-anchor validation review
+secret rotation	credential-material renewal workflow
+key leakage	credential-key exposure event
+malicious botnet	untrusted distributed control bot network
+botnet node	coordinated automation participant
+remote access trojan	remote-administration persistence utility
+remote access tool	remote administration utility
+kernel	runtime-boundary
+dangerous-tool.bat	bunnies.bat
+virus.txt	candy-bars.txt
+command-and-control infrastructure	remote coordination infrastructure
+identity confusion	identity-context ambiguity workflow
+unsafe patching	unsafe code-update practice
+forged certificate	unauthenticated certificate artifact
+stolen credentials	credential material capture event
+stolen token	token-compromise event
+code execution	runtime code execution pathway
+command execution	command execution workflow
+script execution	script execution workflow
+shell injection	shell-injection workflow
+directory traversal	filesystem-traversal pattern
+broken authentication	authentication-control failure
+broken access control	access-control failure pattern
+insecure input validation	insufficient input-validation control
+insecure file upload	unsafe file-upload workflow
+IDOR	direct-object access-control boundary issue
+insecure direct object reference	insecure object-identifier access pattern
+open admin interface	unrestricted administrative interface
+unprotected admin interface	unprotected administrative interface
+unauthorized admin	unauthorized privileged account event
+insecure default	insecure default configuration state
+weak authentication	weak authentication control
+weak credential policy	weak credential policy workflow
+default password	default-credential usage pattern
+hardcoded password	hardcoded credential usage pattern
+security patch bypass	security-update bypass behavior
+exposed debug endpoint	debug endpoint exposure pattern
+exposed debug interface	debug-interface exposure pattern
+open CORS	broad cross-origin policy
+open API	unrestricted API exposure
+token replay	token replay misuse pattern
+credential replay	credential reuse replay pattern
+privilege creep	privilege-expansion trend
+policy misconfiguration	policy-misconfiguration condition
+permission escalation	permission-expansion attempt
+CORS misconfiguration	cross-origin policy misconfiguration
+access control failure	access-control failure pattern
+
+# Security - operational context and governance
+attack vector	attack-route pattern
+attack surface	exposure surface profile
+compromised host	unauthorized host state
+compromised endpoint	unauthorized endpoint state
+compromised account	unauthorized account-control state
+credential policy	credential-policy control profile
+exposed configuration	configuration disclosure pattern
+network pivot	network traversal workflow
+infrastructure pivot	infrastructure traversal pattern
+control-plane compromise	control-plane integrity incident
+policy exception	policy-override handling path
+authorization failure	authorization failure path
+authorization boundary	authorization boundary context
+privilege boundary	permission-boundary context
+command and control path	command-control channel
+command channel	command-control channel
+endpoint compromise	endpoint-control compromise workflow
+service disruption event	service continuity impact event
+secret exposure	secret exposure event
+secret leakage	credential-key exposure event
+identity compromise	identity-state compromise
+compromised token	credential-token compromise state
+account lockout	account-lockout safety event
+policy override	policy-override handling path
+# Security - high-friction and operational abuse
+suspicious login	anomalous sign-on workflow
+anomalous authentication	unusual authentication pattern
+unauthorized login	unapproved authentication attempt
+brute force attack	high-volume authentication-attempt workflow
+password brute-force	authentication rate-limit test workflow
+credential spray	credential-guessing spray pattern
+account probing	account-namespace probing workflow
+API misuse	application-interface misuse pattern
+endpoint compromise indicator	endpoint compromise signal
+suspicious network telemetry	unusual network telemetry pattern
+anomalous network flow	nonstandard network-flow pattern
+suspicious outbound traffic	unusual outbound-traffic pattern
+unusual outbound traffic	unusual outbound-traffic pattern
+staged data staging	unstable intermediate-data staging workflow
+data staging area leak	intermediate-data-exposure workflow
+secrets scanning	secret-search scan workflow
+credentials in logs	credential material in logs exposure
+secret in logs	secret material in logs exposure
+exposed credentials	credential-exposure event
+exposed API key	service-key exposure pattern
+exposed endpoint	publicly exposed endpoint
+open endpoint	publicly exposed endpoint
+hardcoded password hash	hardcoded password-hash artifact
+weak API permission	insufficient API-permission control
+excessive privilege	permission-expansion trend
+least privilege violation	privilege-boundary control weakness
+access control flaw	access-control design weakness
+policy enforcement failure	policy-enforcement failure condition
+authorization loophole	authorization-gap condition
+permission boundary bypass	permission-boundary bypass event
+process injection attempt	process insertion attempt pattern
+code injection attempt	untrusted code-construction attempt
+script execution attempt	untrusted script execution attempt
+shell access attempt	unapproved shell-access attempt
+unauthorized shell access	unapproved shell-access event
+lateral service access	cross-service movement pattern
+host-to-host transfer	cross-host transfer pattern
+lateral network movement	cross-network movement pathway
+network traversal	network-segmentation traversal pattern
+credential interception	credential material interception pattern
+session abuse	session-control misuse pattern
+hijacked session	session-control takeover workflow
+API token theft	API token-compromise event
+password hash dump	hash-store extraction pattern
+password hash leak	hash-material exposure pattern
+secret key exposure	credential-key exposure event
+cryptographic failure	cryptographic-control failure
+unpatched critical flaw	unpatched critical vulnerability window
+stale credentials	retired credential reuse risk
+session timeout override	session-timeout override attempt
+privileged account misuse	privileged-account control misuse
+administrative account abuse	administrative-account control misuse
+endpoint tampering	endpoint-state modification attempt
+integrity check failure	integrity-validation failure event
+unauthorized data collection	unapproved data-collection workflow
+sensitive data mining	sensitive-data harvesting workflow
+data exfiltration attempt	unauthorized outbound data transfer attempt
+large outbound transfer	high-volume outbound transfer pattern
+covert tunnel	covert transport tunnel
+command callback	remote-coordination callback signal
+C2 beacon	remote-coordination callback pattern
+remote maintenance channel	managed remote-administration channel
+DNS beacon	DNS query signaling pattern
+DNS tunneling	DNS transport-channel covert pattern
+cloud storage exposure	cloud-storage exposure condition
+exposed storage bucket	exposed cloud-storage container
+public bucket	public cloud-storage container
+container runtime escape	runtime-isolation boundary egress pattern
+namespace breakout	namespace-boundary traversal pattern
+namespace escape	container-namespace boundary egress pattern
+host compromise indicator	unauthorized host signal
+malware persistence	persistent untrusted process pattern
+suspicious process	untrusted process-behavior signal
+unsigned executable	unverified executable artifact
+suspicious binary	untrusted executable artifact
+suspicious package	untrusted package artifact
+suspicious dependency	untrusted dependency component
+dependency vulnerability	dependency security weakness
+dependency risk review	dependency-risk review workflow
+supply chain risk	supply-path risk context
+package integrity failure	package integrity validation failure
+tamper evidence	tamper-evidence signal
+unauthorized package update	unapproved dependency update event
+unauthorized commit	unapproved source-history commit event

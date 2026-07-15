@@ -1,0 +1,17 @@
+name: Feature request
+description: Propose a vocabulary or context normalization improvement
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Normalization and compatibility considerations
+    validations:
+      required: true

@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools==82.0.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "context-normalizer"
+dynamic = ["version"]
+description = "Deterministic vocabulary and context normalization for coding clients"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Context Normalizer contributors" }]
+keywords = ["context-normalization", "codex", "pi", "terminology", "vocabulary"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Operating System :: MacOS",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Not-A-Non/context-normalizer"
+Repository = "https://github.com/Not-A-Non/context-normalizer.git"
+Issues = "https://github.com/Not-A-Non/context-normalizer/issues"
+Changelog = "https://github.com/Not-A-Non/context-normalizer/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/Not-A-Non/context-normalizer/tree/main/docs"
+
+[project.scripts]
+ctxnorm = "context_normalizer.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+context_normalizer = [
+  "defaults/*.txt",
+  "defaults/*.tsv",
+  "defaults/profiles/*.json",
+  "defaults/profiles/*/*.txt",
+  "defaults/profiles/*/*.tsv",
+  "py.typed",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "context_normalizer.__version__" }

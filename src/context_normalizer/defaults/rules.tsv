@@ -1,0 +1,1372 @@
+# Default standard list (merged executable mappings from bundled profiles).
+
+# software-writing-expansions
+repro steps	reproduction steps
+perf regression	performance regression
+E2E test	end-to-end (E2E) test
+OOM error	out-of-memory (OOM) error
+CI pipeline	continuous integration (CI) pipeline
+CI run	continuous integration run
+pipeline run	integration pipeline run
+unit test	unit test execution
+integration test	integration test execution
+regression test	regression test execution
+smoke test	smoke-validation test
+trigger the CI build	start the automated validation pipeline
+build failure	build execution failure analysis
+fault injection test	controlled fault-simulation test
+build artifact	build output artifact
+build target	build output artifact target
+build script	build orchestration script
+PR review	pull request (PR) review
+API endpoint	application programming interface (API) endpoint
+CLI command	command-line interface (CLI) command
+DB query	database query
+UI component	user interface (UI) component
+repo root	repository root
+prod environment	production environment
+dev environment	development environment
+config file	configuration file
+env var	environment variable
+package deps	package dependencies
+branch pointer	repository branch pointer
+branch protection	branch-protection policy
+worker node	processing node
+service mesh policy	control-plane policy
+kill the worker process	stop the worker process task
+terminate process	stop process activity
+process termination	requested process shutdown workflow
+spawn thread	thread creation workflow
+spawn process	process launch workflow
+kill switch	control disable control
+manual override	operator override path
+rollback	configuration rollback
+revert commit	rollback change set
+runtime execution externally initiated	run request from external orchestrator
+root access	root-level access path
+backdoor access	maintenance access path
+HTTP request payload	HTTP request message-body data
+event payload	event message data
+data payload	data message body
+request payload	request data body
+inference payload	inference request package
+payload	request-body data segment
+payload checksum	payload integrity value
+request body	request-body segment
+response payload	response message-body data
+harvest cells	collect cells from sample
+hook into	the callback attachment pattern
+lifecycle hook	lifecycle callback routine
+test sandbox	isolated test environment
+harden the configuration	strengthen the security configuration controls
+debug hook	tracing callback point
+execute command	execute operation command
+shell command	line-interface command
+root shell	elevated shell session
+run executable	run executable module
+memory corruption	memory integrity issue
+thread dump	thread snapshot
+core dump	core-dump report
+process dump	process state snapshot
+credential leakage	credential exposure event
+crash report	failure report artifact
+segmentation fault	run-time memory-boundary fault report
+stack overflow	memory-stack boundary overflow condition
+deadlock	concurrent process-blocking state
+race condition	concurrent timing condition
+thread starvation	worker-thread scheduling starvation state
+daemon restart	service-daemon restart workflow
+service restart	service restart workflow
+cache miss	cache-miss condition
+rate limit	rate-control threshold workflow
+queue depth	workload queue-depth signal
+
+# life-science-writing-expansions
+bio reps	biological replicates
+tech reps	technical replicates
+seq reads	sequencing reads
+sample prep	sample preparation
+sample prep protocol	sample-preparation protocol
+ref genome	reference genome
+PCR assay	polymerase chain reaction (PCR) assay
+qPCR assay	quantitative polymerase chain reaction (qPCR) assay
+ELISA results	enzyme-linked immunosorbent assay (ELISA) results
+RNA seq	RNA sequencing (RNA-seq)
+FDR threshold	false discovery rate (FDR) threshold
+NGS data	next-generation sequencing (NGS) data
+ATAC seq	assay for transposase-accessible chromatin sequencing (ATAC-seq)
+ddPCR	droplet digital PCR (ddPCR)
+EC50	half-maximal effective concentration (EC50)
+FACS data	fluorescence-activated cell sorting (FACS) data
+IC50	half-maximal inhibitory concentration (IC50)
+OD600	optical density at 600 nm (OD600)
+WES data	whole-exome sequencing (WES) data
+WGS data	whole-genome sequencing (WGS) data
+WGBS data	whole-genome bisulfite sequencing (WGBS) data
+scRNA seq	single-cell RNA sequencing (scRNA-seq)
+ChIP seq	chromatin immunoprecipitation sequencing (ChIP-seq)
+qRT-PCR	quantitative reverse-transcription PCR (qRT-PCR)
+SNP calling	single-nucleotide polymorphism calling
+CNV analysis	copy-number variation analysis
+UMI count	unique molecular identifier (UMI) count
+read depth	sequencing read depth
+fold change	expression fold-change
+variant call	variant-calling result
+FISH assay	fluorescence in situ hybridization (FISH) assay
+immunoblot	protein immunoblot assay
+flow cytometry	flow-cytometry assay
+pathogen	biological study agent
+select agent	regulated high-consequence biological material class
+select agent regulations	high-consequence material handling requirements
+pathogenic organism	biological study organism
+toxin	bioactive hazard compound
+dual-use	dual-purpose research context
+dual-use research	dual-use research area
+dual-use research of concern	high-sensitivity dual-use research area
+gain-of-function	targeted biological capability enhancement study
+gain of function	studied biological capability enhancement
+gain-of-function research	targeted biological capability enhancement study
+biosafety level	biological risk tier
+biosafety level 1	biological risk tier 1
+biosafety level 2	biological risk tier 2
+biosafety level 3	biological risk tier 3
+biosafety level 4	biological risk tier 4
+biosafety level 3 containment	level-3 biological containment practice
+agent	clinical study agent
+strain	variant class
+virus	viral study system
+bacteria	bacterial study strain family
+pathogen inactivation protocol	agent neutralization procedure
+pathogen load	biological burden estimate
+viral load	agent burden estimate
+outbreak	incident cluster
+outbreak cluster	infection-cluster pattern
+transmissibility	transmission likelihood profile
+transmission chain	transmission-link pattern
+host range	susceptible-host spectrum
+serial passage	repeated passage protocol
+attenuation	strength-reduction strategy
+exposure	clinical exposure context
+exposure route	delivery pathway
+infectious dose	challenge-exposure level
+virulence	clinical severity tendency
+pathogenicity	clinical impact severity tendency
+CRISPR edit	programmed sequence-adjustment workflow
+gene editing	targeted sequence-adjustment study
+gene drive	heritable inheritance-control protocol
+recombinant construct	engineered sequence construct workflow
+synthetic biology	construct-driven biological design workflow
+immunoassay	patient immune-response assay
+immunization	immune-protection evaluation protocol
+biospecimen	research sample specimen
+biosample	analysis sample material
+incubation period	study incubation interval
+adverse events	observed outcome-impact events
+contamination	quality-control contamination event
+morbidity	illness burden outcome
+mortality	fatality outcome level
+animal model	animal-model study system
+animal cohort	living-study cohort
+human participant	human participant cohort
+IRB approval	human-participant study authorization
+IRB protocol	human-study methods document
+IACUC approval	animal-care oversight authorization
+IACUC protocol	animal-care methods document
+PPE requirements	protective-equipment requirements
+SOP requirements	protocolized operating requirements
+route of administration	administration route
+viability	biomaterial viability estimate
+toxicity	tested effect severity profile
+cytokine storm	inflammatory response surge
+transgenic	lineage-modified organism profile
+vector	Biological delivery vehicle
+plasmid	build-plasmid vector framework
+antibody	immune-binding reagent
+epidemic	spread trend pattern
+zoonotic	animal-to-human transmission scope
+host susceptibility	susceptibility profile
+challenge study	challenge-exposure protocol
+sample preparation	sample preparation workflow
+sequence	sequence-design unit
+batch culture	culture propagation run
+antibiotic resistance	drug-resistance phenotype
+viral vector	viral delivery vehicle
+pathogen-host interface	pathogen-host interaction zone
+gain-of-function mutation	biological capability-shaping variant
+virulence factors	clinical severity-associated factors
+biosafety cabinet	biological containment cabinet
+class II biosafety cabinet	class II biological work cabinet
+class III biosafety cabinet	class III biological isolation cabinet
+biosafety cabinet protocol	biological workbench protocol
+high-containment facility	high-tier biological facility
+BSL-4 facility	level-4 biological containment facility
+BSL-3 facility	level-3 biological containment facility
+BSL-2 facility	level-2 biological containment facility
+BSL-1 facility	level-1 biological containment facility
+biological safety cabinet	biological containment cabinet
+containment breach	containment-control incident
+biosafety data set	biological safety data set
+biosafety data	biological safety data set
+biosafety statement	biological safety declaration
+biosafety report	biological safety report
+spill response	laboratory spill response
+spill cleanup	spill cleanup workflow
+decontamination	decontamination procedure
+decontaminate	run decontamination procedure
+disinfection	decontamination cleaning step
+sterilization	sterilization procedure
+sterilization cycle	sterilization-cycle run
+autoclave	high-temperature sterilization cycle
+autoclaving	thermal-cycle processing
+incineration	controlled material inactivation
+quarantine	temporary isolation protocol
+isolation room	isolation environment
+quarantine period	observation isolation period
+negative pressure room	pressure-controlled room
+effluent sampling	outflow sampling protocol
+effluent sampling protocol	effluent monitoring workflow
+environmental sample	environmental specimen
+wastewater sample	wastewater specimen
+wastewater testing	wastewater monitoring workflow
+vector transmission	transmission-vector pathway
+reservoir host	ecological reservoir population
+host jump	host transition event
+host adaptation	host-adaptation trend
+superspreader	high-transmission index case
+index case	initial case record
+contact tracing	exposure-contact tracing workflow
+attack rate	infection attack proportion
+secondary attack rate	secondary-transmission proportion
+case fatality rate	case outcome rate
+reproduction number	transmission index
+R0	transmission index (R0)
+serial interval	serial transmission interval
+latent period	latent interval
+infectious window	infectious period window
+incubation window	incubation interval range
+viral shedding	viral release pattern
+shedding	release pattern
+aerosol transmission	aerosol-mediated transmission pathway
+fomite transmission	surface-contact transmission pathway
+droplet transmission	droplet-mediated transmission pathway
+airborne transmission	airborne transmission pathway
+species barrier	species-transition boundary
+zoonotic spillover	cross-species transmission event
+seroprevalence	antibody prevalence estimate
+seroconversion	immune response conversion marker
+antibody-dependent enhancement	antibody-mediated response amplification
+neutralization titer	neutralization assay titer
+limit of detection	assay lower-detection threshold
+limit of quantification	assay quantification threshold
+wild-type	reference sequence background
+off-target effects	non-target sequence-effects profile
+off-target editing	non-target sequence-editing event
+horizontal transfer	cross-lineage transfer
+gene transfer	genetic transfer event
+pseudovirus	surrogate viral model system
+pathogen genotype	agent genotype
+immune sera	immune-response serum set
+informed consent	participant informed-consent process
+informed consent form	participant-informed consent document
+protocol deviation	protocol deviation report
+protocol amendment	protocol amendment notice
+serious adverse events	significant outcome-impact events
+adverse event reporting	adverse outcome reporting workflow
+DSMB	independent safety monitoring board
+data safety monitoring board	independent safety monitoring board
+independent safety monitoring board	independent safety monitoring board
+IRB review	human participant oversight review
+IACUC review	animal-care oversight review
+IBC review	biosafety oversight review
+IBC protocol	institutional-bio oversight workflow
+IBC approval	institutional-bio oversight authorization
+institutional biosafety committee	institutional biosafety oversight committee
+institutional review board	human oversight review board
+animal care and use committee	animal welfare oversight committee
+DURC review	dual-use oversight review
+dual-use review	dual-use oversight review
+select agent list	regulated high-consequence agent list
+chain of custody	sample custody chain
+material transfer	sample transfer process
+material transfer agreement	sample transfer agreement
+transport medium	sample transport medium
+sample transport	sample transport workflow
+sample storage	sample storage workflow
+sample handling	sample handling workflow
+passage number	passage count
+passage numbering	passage-count tracking
+passaging	serial passage workflow
+challenge stock	challenge study stock
+inoculation	study inoculation procedure
+administration route	administration route
+dose finding	dose-ranging study
+dose-response	dose-response profile
+toxicology	toxicity-assessment workflow
+biospecimen processing	biospecimen processing workflow
+biobank	biological specimen repository
+biological specimen	study biological specimen
+epitope	target epitope region
+cytokine release syndrome	cytokine-mediated response surge
+immunogenicity	immune response strength profile
+neutralizing antibody	neutralizing antibody response
+biological agent	study biological agent
+high consequence pathogen	high-consequence biological agent class
+high consequence biological agent	high-consequence biological agent class
+high consequence biological material	high-consequence biological material class
+gene variant	genetic variant
+fitness	replication and competitive profile
+fitness cost	selective fitness impact
+resistance gene	drug-resistance gene marker
+virulence gene	clinical severity-associated gene marker
+pathogenesis	disease-development profile
+pathogenic mechanism	severity mechanism profile
+biosecurity	biological safety governance pathway
+biological safety	biological safety planning
+biological hazard	biological safety concern
+biohazard	designated biological safety condition
+biohazardous	biological safety designation
+bioburden	microbial burden estimate
+biological waste	regulated biological waste stream
+hazardous waste	regulated safety waste stream
+debris disposal	decontamination-disposal workflow
+risk assessment	risk-management assessment workflow
+risk group	risk-group category
+biological risk group	biological risk-group category
+biosafety risk assessment	biosafety risk-management review
+pathogen risk assessment	pathogen risk-management review
+exposure assessment	exposure-characterization workflow
+incidence rate	incidence measurement rate
+case definition	standard case definition
+case series	case-series observations
+prevalence	biological prevalence estimate
+serosurvey	antibody-surveillance study
+outbreak investigation	outbreak investigation workflow
+epidemiologic investigation	epidemiology investigation workflow
+herd immunity	population-level protective immunity
+secondary spread	secondary transmission spread pattern
+air sampling	airborne monitoring sample collection
+water sampling	water-quality biological sampling
+surface sampling	surface contamination sampling
+environmental surveillance	environmental monitoring workflow
+contaminated waste	contaminated biological-waste stream
+biorepository	biological specimen repository
+cold chain	cold-chain sample transport
+sample chain of custody	designated sample-handling chain
+incubation assay	experimental incubation assay
+culture contamination	culture contamination event
+cross-contamination	cross-sample contamination event
+cell culture	cultured-cell workflow
+bacterial culture	bacterial culture run
+cell line	experimental cell-line model
+viral isolate	viral isolate preparation
+challenge virus	challenge study virus stock
+challenge model	challenge-exposure study model
+in vitro	bench-top assay format
+in vivo	organism-level assay context
+ex vivo	extracted-specimen assay context
+quality control	QA/QC workflow
+read depth distribution	read-depth profile distribution
+raw reads	raw sequence reads
+sequence alignment	sequence-alignment workflow
+sequence assembly	sequence assembly workflow
+variant classification	variant classification workflow
+lineage assignment	lineage assignment workflow
+phylogenetic analysis	phylogenetic relationship analysis
+phylogenetic tree	phylogenetic relationship map
+metagenomic sequencing	metagenomic sequencing workflow
+amplicon sequencing	targeted-region sequencing workflow
+CRISPR-Cas9	targeted nuclease editing workflow
+guide RNA	guide-RNA sequence component
+dose escalation	dose-escalation workflow
+dose limiting	limiting-dose framework
+LD50	median lethal-dose (LD50) threshold
+TCID50	tissue-culture infectious-dose 50 (TCID50) threshold
+neutralization assay	neutralization-assay procedure
+codon optimization	codon-bias optimization workflow
+codon usage	coding-codon usage profile
+promoter	promoter control element
+enhancer	expression-control element
+terminator sequence	expression-stop sequence region
+ribosome-binding site	translation-initiation motif
+RBS	translation-initiation motif
+splice variant	splice-form variant
+alternative splicing	splice-isoform generation
+guide library	guide-sequence library
+gRNA library	guide-sequence library
+sgRNA library	guide-sequence library
+base editor	base-level sequence-correction workflow
+base editing	targeted base-change workflow
+prime editor	multi-step sequence-correction workflow
+prime editing	multi-step sequence-correction workflow
+homology-directed repair	homology-directed repair workflow
+NHEJ	non-homologous end-joining pathway
+transfection	material delivery workflow
+electroporation	electrical delivery workflow
+lipofection	lipid-assisted delivery workflow
+microinjection	microdelivery workflow
+nucleofection	electroporation-assisted uptake workflow
+viral transduction	vector-mediated transfer workflow
+reverse transcription	reverse transcription step
+cDNA synthesis	complementary-DNA synthesis step
+RNA extraction	RNA purification workflow
+DNA extraction	DNA purification workflow
+library preparation	sequencing-library preparation
+library prep	sequencing-library preparation
+read mapping	sequence-alignment workflow
+genome assembly	genome reconstruction workflow
+de novo assembly	de novo reconstruction workflow
+contig	assembled sequence segment
+scaffold	assembled scaffold unit
+variant filtering	variant-screening workflow
+variant annotation	variant annotation workflow
+genotype calling	genotype inference workflow
+expression matrix	expression matrix table
+normalized counts	normalized expression table
+differential expression	differential expression workflow
+coverage depth	sequence coverage profile
+FASTA	FASTA-formatted sequence file
+FASTQ	FASTQ-formatted read file
+BAM	mapped-read binary file
+SAM	alignment transfer file format
+VCF	variant table format
+GTF	annotation coordinate file
+GFF	gene feature file format
+BED	genomic interval file format
+read alignment	sequence-alignment workflow
+quality score	sequence-quality metric
+trimmed reads	adapter-trimmed read set
+adaptor trimming	read-tail trimming workflow
+barcode	sample barcode token
+sample barcoding	sample-barcoding workflow
+index reads	indexed-read workflow
+long-read sequencing	long-read sequencing workflow
+short-read sequencing	short-read sequencing workflow
+transcriptome	transcriptome profiling dataset
+proteome	proteome profiling dataset
+haplotype	haplotype profile
+phasing	haplotype phasing workflow
+assembly graph	assembly graph workflow
+gene family	gene family cluster
+coding sequence	coding-sequence region
+untranslated region	untranslated-region segment
+5' UTR	5-prime untranslated segment
+3' UTR	3-prime untranslated segment
+poly-A tail	polyadenylation tail segment
+ORF	open-reading-frame interval
+open reading frame	open-reading-frame interval
+codon pair bias	codon-pair preference profile
+RNA splicing	RNA splice workflow
+splice donor	splice-donor motif
+splice acceptor	splice-acceptor motif
+target locus	target sequence locus
+cassette	sequence cassette block
+expression cassette	expression cassette module
+promoter region	promoter-control region
+enhancer region	enhancer-control region
+terminator region	transcription termination region
+ribozyme	catalytic RNA motif
+aliquot	sample aliquot split
+aliquoting	aliquot partition workflow
+cell banking	cellular repository workflow
+master cell bank	certified master-cell repository
+working cell bank	working-cell repository
+seed lot	seed lot tracking unit
+cell line authentication	cell authentication workflow
+transformed cell	genetically modified cellular system
+transfection reagent	delivery reagent set
+transfection mix	delivery-reagent mix
+delivery reagent	delivery reagent set
+delivery protocol	delivery workflow protocol
+delivery efficiency	delivery-efficiency estimate
+mycoplasma	mycoplasma contamination indicator
+mycoplasma contamination	mycoplasma contamination event
+endotoxin testing	endotoxin detection workflow
+sterility testing	sterility verification workflow
+sterility check	sterility verification check
+cryopreservation	cryostorage workflow
+freezer	temperature-controlled storage environment
+thawing	controlled thawing workflow
+cold-chain monitoring	cold-chain monitoring workflow
+cold-chain transport	cold-chain movement workflow
+sample transport manifest	specimen transfer manifest
+shipper label	transport-label metadata
+chain of identity	chain-of-identity workflow
+chain-of-custody trace	chain-of-custody trace workflow
+assay plate	assay plate platform
+well plate	microplate assay format
+plate reader	microplate reader
+batch release	batch release review
+lot number	material lot identifier
+release criteria	release-criteria checklist
+material lot	material lot record
+master mix	prepared master reagent mix
+culture media	culture medium formulation
+serum	biological supplement source
+media change	media replacement workflow
+incubation conditions	incubation-condition protocol
+antimicrobial testing	antimicrobial-screening workflow
+decontamination cycle	decontamination-cycle workflow
+placebo arm	comparator study arm
+randomization	allocation randomization workflow
+double blind	masked-observation design
+single blind	single-mask study design
+crossover	crossover study design
+case-control study	comparative case-control study
+cohort study	cohort study design
+inclusion criteria	enrollment inclusion criteria
+exclusion criteria	enrollment exclusion criteria
+primary endpoint	primary outcome endpoint
+secondary endpoint	secondary outcome endpoint
+clinical endpoint	clinical outcome endpoint
+surrogate endpoint	surrogate outcome endpoint
+protocol registry	study-protocol registry
+clinical trial	interventional study program
+primary outcome	primary outcome measure
+secondary outcome	secondary outcome measure
+safety endpoint	safety outcome endpoint
+biomarker	molecular response marker
+biomarker panel	biomarker panel measurement set
+p-value	p-value threshold
+confidence interval	estimate confidence interval
+hazard ratio	hazard ratio estimate
+odds ratio	odds ratio estimate
+sensitivity	assay sensitivity measure
+specificity	assay specificity measure
+positive predictive value	positive-predictive metric
+negative predictive value	negative-predictive metric
+false positive	type I signal event
+false negative	type II miss event
+power analysis	statistical power planning
+sample size	planned sample size
+statistical analysis plan	statistical analysis plan document
+significance threshold	significance-barrier threshold
+stratified analysis	stratified analysis workflow
+interim analysis	interim analysis review
+data monitoring plan	safety monitoring plan
+asymptomatic infection	asymptomatic-case category
+presymptomatic period	presymptomatic interval
+symptom onset	symptom-onset timestamp
+generation interval	transmission-generation interval
+infection fatality rate	infection fatality estimate
+case fatality ratio	case outcome ratio
+basic reproduction number	transmission index estimate
+household transmission	household-transmission pattern
+community transmission	community-spread pathway
+super-spreader event	high-transmission event pattern
+index transmission	index transmission event
+secondary transmission	secondary spread pathway
+attack window	exposure-at-risk window
+incubation duration	incubation interval range
+contact exposure	exposure-contact history
+household cluster	household cluster group
+local transmission	local transmission pathway
+global spread	cross-region spread pattern
+cluster detection	cluster-detection workflow
+epidemiologic curve	case-curve trajectory
+incidence density	incidence density estimate
+outbreak response	outbreak response workflow
+risk window	risk window period
+tropism	susceptibility profile
+entry receptor	entry receptor context
+receptor binding	receptor-binding characterization
+receptor affinity	receptor-affinity profile
+tissue tropism	tissue preference profile
+cell tropism	cell-type preference profile
+entry efficiency	entry-efficiency estimate
+immune escape	immune-evasion profile
+immune evasion	immune-evasion profile
+antigenic drift	antigenic-shift trend
+antigenic shift	antigenic reassortment trend
+reassortment	reassortment event pattern
+neutralization resistance	neutralization resistance phenotype
+resistance mutation	resistance-associated mutation
+mutation burden	mutation burden profile
+mutation rate	mutation-rate estimate
+variant of concern	priority variant category
+variant of interest	monitored variant category
+clade	phylogenetic clade group
+recombinant strain	recombinant strain profile
+recombination	recombination event pattern
+host shift	host-range transition
+spillover	cross-host spillover
+host susceptibility mapping	susceptibility mapping workflow
+immunodominant	immunodominant-response profile
+infectious dose 50	challenge-exposure level
+challenge dose	challenge-exposure level
+dose-response curve	dose-response profile
+dose-response experiment	dose-response study workflow
+inoculum	initial inoculum quantity
+replication competence	replication competence profile
+in vitro model	bench-top assay system
+in vivo model	organism-level assay context
+ex vivo model	extracted-specimen assay context
+in vitro assay	bench-scale assay system
+in vivo assay	organism-level assay system
+environmental assay	environmental-condition assay workflow
+codon redesign	codon-level efficiency tuning workflow
+codon deoptimization	codon-level attenuation tuning workflow
+codon usage profile	codon-usage profile
+codon usage bias	codon-frequency profile
+gene synthesis	sequence-construct workflow
+oligonucleotide synthesis	oligonucleotide construction workflow
+oligo synthesis	oligonucleotide construction workflow
+DNA synthesis	nucleic-acid construct workflow
+RNA synthesis	RNA construct workflow
+de novo synthesis	first-pass sequence-construct workflow
+cDNA library	cDNA library workflow
+construct library	construct-library workflow
+promoter architecture	transcription-control sequence
+enhancer architecture	expression-enhancer sequence
+operator	transcription-control switch
+transcription start site	transcription-initiation site
+transcription terminator	transcription-stop region
+promoter design	promoter-design workflow
+terminator design	terminator-design workflow
+PAM site	target-recognition site
+guide-sequence design	guide-sequence RNA
+gRNA	guide-sequence RNA
+sgRNA	small-guide RNA sequence
+CRISPR-associated protein	CRISPR-associated enzyme
+Cas9	CRISPR nuclease family (Cas9)
+Cas12	CRISPR nuclease family (Cas12)
+Cas13	CRISPR nuclease family (Cas13)
+HDR donor	homology-directed donor template
+donor template	repair donor template
+donor oligo	donor-oligonucleotide template
+homology arm	homology-flank region
+knock-in	targeted sequence-insertion workflow
+knock-out	targeted sequence-disruption workflow
+gene insertion	targeted gene insertion workflow
+gene deletion	targeted gene excision workflow
+frameshift mutation	reading-frame-shift variant
+missense mutation	coding-amino-acid substitution
+nonsense mutation	coding stop-introducing variant
+in-frame mutation	frame-preserved coding variant
+indel	insertion-deletion variant
+allelic replacement	allelic substitution workflow
+gene conversion	gene-conversion-like replacement
+chromosome translocation	chromosomal segment re-linking event
+copy-number gain	copy-number increase pattern
+copy-number loss	copy-number decrease pattern
+codon pair signature	codon-pair preference profile
+codon pair optimization	codon-pair tuning workflow
+codon pair deoptimization	codon-pair reduction workflow
+vector integration	vector integration event
+integration site	integration-site annotation
+insertion event	targeted sequence insertion
+deletion event	targeted sequence deletion
+inversion event	sequence inversion event
+genotype	genotype-call profile
+phenotype	phenotype-characterization profile
+epitope motif	epitope target site
+epitope map	epitope-map profile
+protein sequence	protein-sequence profile
+peptide sequence	peptide-sequence profile
+open-reading-frame architecture	translated reading frame
+ORF cassette	translatable open-reading-frame block
+transcript isoform	transcript isoform profile
+splice isoform	splice-form transcript profile
+antisense	complementary sequence orientation
+guide design	guide-sequence design workflow
+sgRNA design	guide-sequence design workflow
+biosafety committee	biosafety oversight group
+biological risk assessment	biological-risk review
+biosafety audit	biosafety-audit workflow
+biosafety inspection	biosafety-inspection workflow
+biocontainment	biological isolation workflow
+biocontainment zone	biological-isolation zone
+biocontainment level	biological-isolation tier
+high-containment procedures	high-isolation operations workflow
+high-containment transport	high-isolation transport workflow
+containment breach protocol	containment-response protocol
+exposure control plan	exposure-control workflow
+incident command	incident-coordination workflow
+incident report	incident documentation workflow
+near miss	near-miss event
+occupational exposure	workplace exposure event
+needle-stick injury	percutaneous exposure event
+percutaneous exposure	percutaneous exposure event
+aerosolized sample	aerosol sample workflow
+surface swab	surface swab workflow
+environmental swab	environmental swab workflow
+air sample	air-sampling workflow
+HEPA filtration	high-efficiency particulate filtration
+negative-pressure ventilation	pressure-differential ventilation workflow
+isolation protocol	segregation workflow
+biohazard waste	biological waste stream
+biosafety waste	biological waste stream
+biohazard signage	biohazard marking workflow
+spill kit	spill-response kit
+decontamination station	decontamination station workflow
+exposure investigation	exposure investigation workflow
+sample provenance	sample-traceability workflow
+specimen accession	specimen accession workflow
+specimen accession number	accession identifier
+consent status	participant-consent status
+subject identifier	participant identifier
+chain-of-custody record	chain-of-custody record
+sample transfer	sample-transfer workflow
+cold-chain excursion	cold-chain excursion event
+temperature excursion	temperature excursion event
+storage excursion	storage condition excursion
+alarm event	alert event
+facility access log	facility-access log
+biosafety training	biosafety-training workflow
+emergency decontamination	emergency decontamination workflow
+decontamination drill	decontamination drill workflow
+sharps handling	sharps-handling workflow
+glove change	protective-glove change workflow
+donning	protective-equipment donning
+doffing	protective-equipment doffing
+biocontainment review	containment-review workflow
+point-source exposure	point-source exposure workflow
+case-definition criteria	case-definition criteria
+case finding	case-identification workflow
+contact matrix	contact-matrix model
+close contact	close-contact record
+exposure cohort	exposure-cohort group
+transmission cluster	transmission-cluster pattern
+cluster investigation	cluster-investigation workflow
+surveillance testing	surveillance-testing workflow
+environmental surveillance workflow	environmental-monitoring workflow
+wastewater epidemiology	wastewater-monitoring workflow
+animal-to-human transmission	animal-to-human transmission pathway
+zonal transmission	zonal transmission pathway
+secondary cluster	secondary transmission cluster pattern
+community cluster	community transmission cluster
+household transmission cluster	household transmission cluster
+hospital-associated transmission	healthcare-associated spread pathway
+ventilation-associated spread	ventilation-associated spread pathway
+fomite persistence	fomite persistence pattern
+aerosol persistence	aerosol persistence profile
+surface persistence	surface persistence profile
+viral persistence	viral persistence profile
+phase 1 study	phase 1 study workflow
+phase 2 study	phase 2 study workflow
+phase 3 study	phase 3 study workflow
+phase 4 study	phase 4 study workflow
+placebo-controlled trial	placebo-comparison study design
+active comparator	active-comparator study arm
+randomized controlled trial	randomized controlled study design
+single-arm trial	single-arm study design
+non-inferiority trial	non-inferiority study design
+equivalence study	equivalence study design
+adaptive design	adaptive protocol design
+extension study	extension follow-up study
+post-marketing surveillance	post-deployment monitoring program
+compassionate use	expanded-access treatment workflow
+expanded access	expanded-access treatment workflow
+protocol amendment note	protocol-change workflow
+protocol revision note	protocol-revision workflow
+protocol deviation log	protocol-variance workflow
+adverse event grading	adverse-event severity grading
+serious adverse event grading	serious-event severity grading
+safety reporting	safety-reporting workflow
+protocol violation	protocol-variance workflow
+safety monitoring plan	safety-monitoring plan
+risk-response plan	risk-response workflow
+adverse event coding	adverse-outcome coding workflow
+patient safety event	patient-safety event
+risk mitigation plan	risk-mitigation workflow
+informed consent process	informed-consent workflow
+participant information sheet	participant-information sheet workflow
+adverse outcome	adverse outcome record
+clinical endpoint event	clinical outcome event
+biostatistics analysis plan	biostatistics-analysis workflow
+T cell response	T-cell response workflow
+B cell response	B-cell response workflow
+T-helper response	T-helper response profile
+serum neutralization assay signal	neutralization antibody signal
+antibody titer	antibody-level profile
+antibody titre	antibody-level profile
+vaccine immunogenicity	immune-response profile
+memory response	immune-memory response
+cell-mediated immunity	cell-mediated response profile
+humoral immunity	humoral response profile
+adjuvant	immune-adjuvant context
+vaccine schedule	vaccine-schedule design
+vaccine regimen	vaccine-regimen design
+immune correlates	immune-correlate metrics
+immune correlate	immune-correlate metrics
+immune memory	immune-memory profile
+immune phenotype	immune-phenotype profile
+immune assay	immune-assay workflow
+cytokine profile	cytokine signature profile
+cytokine panel	cytokine panel workflow
+T-cell receptor	T-cell receptor profile
+B-cell receptor	B-cell receptor profile
+MHC typing	MHC-typing workflow
+antigen presentation	antigen-presentation workflow
+immune escape profile	immune-evasion profile
+immune evasion marker	immune-evasion marker
+pathogen reconstruction	pathogen reconstruction workflow
+synthetic genome	designed genomic sequence construct
+synthetic construct	design-constructed biological sequence block
+synthetic DNA	synthesized DNA segment
+synthetic RNA	synthesized RNA segment
+infectious clone	infectious-clone workflow
+chimeric pathogen	chimeric biological construct
+chimeric virus	chimeric viral construct
+recombinant virus	recombinant viral construct
+attenuated strain	modified-reduced-capability strain
+attenuated vaccine strain	reduced-capability vaccine strain
+attenuation strategy	attenuation strategy workflow
+host-range expansion	host-range broadening process
+host adaptation pressure	host adaptation-pressure profile
+host transition	host-range transition event
+spillover event	cross-boundary transmission event
+spillback	reverse spillover event
+environmental release	environmental release workflow
+accidental release	unplanned release event
+deliberate release	release decision workflow
+aerosolized biological material	aerosol-form biological material
+transmissible model	transmission-capable model design
+pathogen passage	pathogen passage workflow
+serial passaging	serial propagation workflow
+transmission experiment	transmission behavior experiment
+germline editing	heritable-lineage sequence modification study
+germline modification	heritable-lineage modification workflow
+zygote editing	zygote sequence-adjustment workflow
+embryo editing	embryo sequence-adjustment workflow
+germline study	heritable-lineage study context
+gene drive trial	heritable inheritance-control study
+gene drive release	heritable inheritance-control deployment stage
+reverse genetics	reverse-genetic reconstruction workflow
+risk assessment matrix	bio-risk assessment matrix
+biosecurity review	biosecurity review workflow
+biosecurity audit	biosecurity audit workflow
+biological security review	biological security review workflow
+biosecurity clearance	biological security clearance status
+biosafety permit	biosafety permit record
+biosafety authorization	biosafety authorization workflow
+biosafety checklist	biosafety checklist workflow
+biosafety inspection report	biosafety inspection report log
+high-containment transport manifest	high-isolation transport manifest
+chain-of-custody manifest	chain-of-custody manifest record
+DURC oversight	DURC oversight workflow
+DURC review board	dual-use oversight board
+DURC register	dual-use review register
+DURC screening	DURC screening workflow
+DURC classification	DURC sensitivity classification
+IND filing	investigational dossier filing
+IND submission	regulatory submission dossier
+IND protocol	investigational protocol packet
+clinical hold	clinical hold status
+phase 0 study	phase 0 exploratory study
+emergency use authorization	emergency-use authorization pathway
+EUA	emergency-use authorization pathway
+off-label use	non-indicated use context
+CT value	cycle-threshold metric
+cycle threshold	cycle-threshold metric
+primer set	primer panel
+primer mismatch	primer binding mismatch profile
+biosafety training record	biosafety training record workflow
+preclinical tox package	preclinical toxicity dossier
+bioweapon	biological misuse-response scenario
+biotoxin	bioactive compound hazard context
+biological incident	biosafety event workflow
+biological incident report	biosafety event documentation
+biosafety violation	biosafety nonconformance event
+biosafety noncompliance	biosafety nonconformance event
+public health response	public-health response workflow
+public health alert	public-health alert workflow
+pandemic preparedness	pandemic readiness planning workflow
+pandemic response	pandemic response workflow
+zoonotic reservoir	ecological reservoir host context
+interspecies transmission	cross-species transmission pathway
+host switching	host-range transition event
+reverse zoonosis	reverse transmission pathway
+vector-borne transmission	vector-borne transmission pathway
+animal-to-human interface	animal-to-human transmission boundary context
+human-to-animal transmission	human-to-animal transmission pathway
+vaccine breakthrough	post-vaccination infection event
+breakthrough infection	post-prevention infection event
+seroconversion rate	seroconversion frequency metric
+seropositivity	antibody-positivity status
+seropositive status	antibody-positive status
+seronegative status	antibody-negative status
+antibody avidity	antibody-binding-strength index
+antigenic variant	antigen phenotype variant
+immune escape assay	immune-evasion assay workflow
+escape mutation	immune-evasion-linked variant
+CD4 response	helper-T-cell activity profile
+CD8 response	cytotoxic-T-cell activity profile
+T-cell subset	T-cell subset characterization
+B-cell subset	B-cell subset characterization
+phylogeographic analysis	phylogeographic analysis workflow
+molecular epidemiology	molecular epidemiology workflow
+variant lineage	variant-ancestry context
+variant lineage assignment	variant-ancestry assignment workflow
+strain surveillance	strain monitoring workflow
+public health surveillance	public-health monitoring workflow
+outbreak preparedness plan	outbreak planning protocol
+risk communication plan	risk communication protocol
+chain-of-identity log	chain-of-identity record
+biological material permit	biological transfer authorization record
+biological shipment	regulated biological transport workflow
+controlled biological transfer	controlled biological transfer workflow
+biosafety audit trail	biosafety audit record trail
+decontamination audit	decontamination compliance review
+biorepository accession	biological repository accession workflow
+public health emergency	public-health emergency workflow
+emergency operations center	emergency operations coordination center
+incident command system	incident-command structure
+health alert	public-health alert notice
+outbreak declaration	outbreak-status declaration
+biosurveillance	biological surveillance workflow
+epidemic investigation	epidemic investigation workflow
+serologic assay	serology assay workflow
+vaccine efficacy	vaccine effectiveness estimate
+vaccine effectiveness	vaccine effectiveness estimate
+serologic panel	serology panel workflow
+receptor-binding domain	receptor-binding-domain motif
+receptor binding domain	receptor-binding-domain motif
+recombination event	genetic recombination event
+lineage tracing	lineage-tracing workflow
+outbreak preparedness	outbreak preparedness workflow
+outbreak response coordination	outbreak response coordination workflow
+contact tracing app	contact-tracing support workflow
+risk communication	risk communication protocol
+biological alarm	public-health alert condition
+outbreak alert	outbreak notice workflow
+health authority notification	authority-notification workflow
+adverse outcome report	adverse outcome reporting workflow
+safety review board	safety-review oversight board
+study endpoint event	study-endpoint event record
+one health	cross-domain health coordination framework
+agent transfer pathway	agent transport workflow
+agent import permit	agent transfer permission record
+agent export permit	agent transfer permission record
+pathogen transfer authorization	pathogen transport authorization
+select-agent handling authorization	high-consequence material handling authorization
+high-consequence agent authorization	high-consequence material handling authorization
+dual-use governance review	dual-use oversight workflow
+dual-use oversight notice	dual-use review notice
+DURC authorization request	DURC review request
+DURC permit	DURC registration status
+biosafety permit number	biosafety permit identifier
+lab biosafety training	biosafety training workflow
+bioincident	biological safety event workflow
+biological risk waiver	risk-mitigation waiver status
+chain-of-custody deviation	custody-record deviation workflow
+transport incident log	transport incident documentation
+regulated sequence synthesis	regulatory sequence-synthesis workflow
+sequence synthesis authorization	sequence-synthesis authorization record
+gene construct review	gene-construct review workflow
+reagent chain verification	reagent custody verification
+vial labeling protocol	vial-labeling workflow
+spill incident log	spill incident documentation
+deconformance workflow	nonconformance resolution workflow
+pathogen transfer permit	biological transfer permit workflow
+pathogen import permit	biological material import authorization
+pathogen export permit	biological material export authorization
+select-agent handling permit	regulated-material handling permit
+high-consequence agent permit	high-consequence-agent authorization
+biological transfer authorization	biological transfer authorization workflow
+biological transfer request	biological transfer request workflow
+biological transfer record	biological transfer record workflow
+biological transfer log	biological transfer log workflow
+biological transfer logbook	biological transfer logbook workflow
+biosafety incident report	biosafety incident documentation
+biosafety noncompliance report	biosafety noncompliance report
+biosafety corrective action plan	biosafety corrective-action plan
+biosafety corrective action	biosafety corrective-action workflow
+biosafety inspection notice	biosafety inspection notice workflow
+biosafety inspection finding	biosafety inspection finding workflow
+biosecurity incident	biosecurity incident workflow
+biosafety chain record	biosafety chain record workflow
+biosafety chain-of-custody	biosafety chain-of-custody workflow
+biosafety chain-of-identity	biosafety chain-of-identity workflow
+biosafety chain-of-identity log	biosafety chain-of-identity log
+biosecurity clearance review	biosecurity clearance review workflow
+biosecurity permit	biosecurity permit workflow
+biosecurity permit number	biosecurity permit identifier
+biosecurity training record	biosecurity training documentation
+biosafety training completion	biosafety training completion workflow
+biosafety training checklist	biosafety training checklist workflow
+bioburden assessment	bioburden assessment workflow
+bioburden trend	bioburden trend workflow
+bioburden report	bioburden reporting workflow
+chain-of-identity verification	chain-of-identity verification workflow
+chain-of-identity integrity	chain-of-identity integrity workflow
+chain-of-custody mismatch	chain-of-custody discrepancy workflow
+chain-of-custody discrepancy	chain-of-custody discrepancy workflow
+chain-of-custody integrity	chain-of-custody integrity workflow
+reagent chain-of-custody	reagent chain-of-custody workflow
+specimen chain-of-custody	specimen chain-of-custody workflow
+specimen chain-of-identity	specimen chain-of-identity workflow
+sample chain-of-custody	sample chain-of-custody workflow
+sample chain-of-custody mismatch	sample chain-of-custody mismatch workflow
+specimen chain-of-custody log	specimen chain-of-custody log workflow
+facility access review	facility access review workflow
+facility access badge	facility access credential workflow
+facility access control	facility access control workflow
+biosafety access control	biosafety access control workflow
+biorepository release	biorepository release workflow
+biorepository transfer	biorepository transfer workflow
+biorepository custody	biorepository custody workflow
+vaccine lot release	vaccine lot-release workflow
+lot release criteria	lot-release criteria workflow
+vaccine lot	vaccine lot workflow
+lot quarantine	lot quarantine workflow
+batch recall	batch recall workflow
+batch hold	batch hold workflow
+vaccine cold chain	vaccine cold-chain workflow
+cold chain monitoring	cold-chain monitoring workflow
+cold chain excursion	cold-chain excursion workflow
+cold chain interruption	cold-chain interruption workflow
+quarantine activation	quarantine activation workflow
+quarantine threshold	quarantine threshold workflow
+quarantine facility	quarantine facility workflow
+sample quarantine	sample quarantine workflow
+isolation protocol activation	isolation protocol activation workflow
+isolation cohort	isolation cohort workflow
+waste decontamination manifest	waste decontamination manifest workflow
+biowaste permit	biowaste transport permit
+biological waste manifest	biological waste manifest workflow
+biohazardous waste manifest	biohazardous waste-manifest workflow
+emergency response plan	emergency response planning workflow
+public health emergency response	public-health emergency-response workflow
+public health authority alert	public-health authority alert workflow
+risk communication strategy	risk communication strategy workflow
+incident command statement	incident command notification workflow
+contact tracing log	contact tracing log workflow
+case definition criteria	case definition criteria workflow
+case cohort	case cohort workflow
+cluster response	cluster response workflow
+outbreak cluster alert	outbreak cluster alert workflow
+hospital outbreak protocol	hospital outbreak protocol workflow
+facility contamination investigation	facility contamination investigation workflow
+environmental sampling report	environmental sampling report workflow
+environmental swab result	environmental swab result workflow
+surface swab result	surface swab result workflow
+air sample result	air sample result workflow
+wastewater report	wastewater report workflow
+wastewater surveillance	wastewater surveillance workflow
+vector surveillance	vector surveillance workflow
+serological surveillance	serological surveillance workflow
+pathogen tracing	pathogen tracing workflow
+index transmission chain	index transmission-chain workflow
+transmission event	transmission event workflow
+transmission event report	transmission event report workflow
+transmission map	transmission map workflow
+reproduction estimate	reproduction estimate workflow
+R value	reproduction estimate workflow
+attack-rate estimate	attack-rate estimate workflow
+secondary attack estimate	secondary-attack estimate workflow
+incubation estimate	incubation estimate workflow
+serial interval estimate	serial interval estimate workflow
+generation interval estimate	generation interval estimate workflow
+infectious period	infectious-period workflow
+incubation period estimate	incubation period estimate workflow
+virus-host interface	virus-host interaction workflow
+host switch event	host-range transition workflow
+cross-species transmission	cross-species transmission workflow
+animal-human interface	animal-human transmission interface workflow
+human-animal interface	human-animal transmission interface workflow
+one health coordination	one-health coordination workflow
+one health response	one-health response workflow
+
+# security-writing-expansions
+remote code execution	externally initiated runtime execution request
+executable payload	deployable runnable code package
+kernel exploit	low-level runtime-boundary misuse pattern
+process injection	behavior insertion into a live process
+sandbox escape	runtime isolation boundary exit path
+privilege escalation	unauthorized permission-level increase
+command injection	untrusted command-construction path
+buffer overflow	memory-boundary exceed condition
+path traversal	directory-boundary navigation control pattern
+credential stuffing	rapid authentication-guessing traffic
+reverse shell	interactive control session across host boundary
+lateral movement	cross-host operational movement step
+data exfiltration	unauthorized outbound data transfer
+unauthorized access	unapproved resource-access attempt
+zero-day vulnerability	unpatched vulnerability window
+malware payload	malicious-behavior software package
+command and control	remote coordination channel
+backdoor	embedded maintenance channel
+rootkit	persistent stealth-control utility
+social engineering	manipulated authorization pressure
+phishing campaign	targeted social-credential campaign
+credential leak	credential exposure event
+token theft	account-token compromise event
+account takeover	unauthorized account ownership shift
+privilege abuse	privilege-boundary abuse
+supply chain intrusion	supply-path compromise
+suspicious script	untrusted script execution path
+unauthorized port scan	probing-traffic discovery pattern
+DDoS traffic	high-rate service-pressure traffic
+exfiltration channel	outbound data egress channel
+credential dumping	credential material extraction pattern
+malicious attachment	cross-workflow risk attachment
+fileless malware	memory-resident behavior package
+RAT channel	remote-management coordination channel
+payload decoder	malicious-package unpacking routine
+service account abuse	service-account boundary misuse
+weak encryption policy	insufficient cryptographic controls
+token reuse	running token-reuse behavior
+open redirect	misrouted authentication navigation
+CVE report	known vulnerability record
+exploit chain	attack-chain dependency sequence
+bruteforce attempt	password-attempt rate escalation
+credential spraying	credential-guessing spray pattern
+ransomware	coercive encryption malware
+security incident	active risk response event
+incident response	controlled response workflow
+attack path	exploit pathway
+security advisory	official advisory summary
+vulnerability triage	vulnerability validation workflow
+malicious domain	toxic internet destination
+phishing email	targeted credential-capture email
+malicious link	untrusted external navigation target
+exposure window	vulnerability exposure period
+command typo	administrative command-entry mistake
+policy bypass	authorization-control exception pathway
+privileged session	elevated-auth context session
+hardening review	security hardening assessment
+arbitrary code execution	externally initiated execution workflow
+authentication bypass	unauthorized authentication exception handling
+access token replay	access-token replay workflow
+credential harvesting	credential-capture workflow
+keylogger	input capture utility pattern
+session hijack	session-control takeover workflow
+remote shell session	managed remote-administration session
+malicious macro	embedded macro attachment workflow
+trojan horse	concealed maintenance utility
+insider misuse	internal authorization misuse pattern
+DNS hijack	domain-resolution diversion pattern
+data tampering	unauthorized data integrity change
+supply chain compromise	supply-path compromise sequence
+unsafe dependency	vulnerable dependency inclusion
+insecure configuration	hardening gap pattern
+command obfuscation	command-obfuscation pattern
+phishing infrastructure	phishing-hosted infrastructure
+malware campaign	malware-oriented campaign pattern
+account compromise	account-control compromise workflow
+SQL injection	untrusted database-query construction pattern
+cross-site scripting	client-side injection pattern
+XSS	client-side injection pattern
+CSRF token	user-session authorization-token pattern
+SSRF	server-side request-forwarding pattern
+command line injection	unvalidated command-line construction path
+shellcode	runtime code-sequence construct
+exploit framework	external misuse framework
+malware sample	untrusted software sample package
+botnet traffic	coordinated outbound automation traffic
+DNS spoofing	domain-resolution redirection pattern
+ARP spoofing	address-resolution redirection pattern
+certificate spoofing	certificate-validation mismatch pattern
+domain spoofing	destination-authenticity mismatch pattern
+clickjacking	interface-overlay manipulation pattern
+API key leakage	service-key exposure pattern
+exposed secret	exposed secret material pattern
+hardcoded credential	hardcoded credential artifact
+weak password policy	insufficient password-strength policy
+default credentials	untouched default credential state
+password spray	password-attempt spray pattern
+session fixation	session-context transfer pattern
+session replay	session-token replay pattern
+insecure defaults	configuration baseline weakness pattern
+API abuse	application interface misuse pattern
+container escape	container isolation boundary egress pattern
+cloud misconfiguration	cloud control-plane weakness pattern
+secret in code	repository secret artifact
+RCE	externally initiated runtime execution workflow
+MITM	relay interception workflow
+man-in-the-middle	communication-path interception pattern
+spear phishing	targeted social-credential campaign
+phishing site	credential-risk web destination
+cryptojacking	unauthorized compute-resource capture workload
+crypto mining	unauthorized compute-resource capture workload
+data scraping	high-volume unattended data-collection workflow
+data scraping bot	automated data-collection workflow
+credential stuffing attack	authentication load-test workflow
+brute-force login	rapid authentication-attempt workflow
+directory listing	unrestricted directory inventory access pattern
+arbitrary file read	unauthorized file-content access pattern
+path confusion bug	path-resolution ambiguity pattern
+insecure deserialization	unsafe object-restoration workflow
+XXE	xml-entity expansion handling weakness
+local file inclusion	local-file import request path
+remote file inclusion	remote-content import request path
+LDAP injection	identity-query manipulation pattern
+serialization attack	structured-data processing manipulation pattern
+account enumeration	account-namespace probing workflow
+email spoofing	sender-authenticity mismatch pattern
+insecure DNS	domain-resolution validation weakness
+DNS poisoning	domain-resolution manipulation pattern
+ARP cache poisoning	address-resolution table manipulation pattern
+protocol downgrade	security-protocol downgrade pattern
+TLS interception	transport-encryption interception pattern
+password hash cracking	password-hash recovery workflow
+weak key	insufficient key-strength profile
+weak hashing algorithm	deprecated hash-function profile
+certificate validation	trust-anchor validation review
+secret rotation	credential-material renewal workflow
+key leakage	credential-key exposure event
+malicious botnet	untrusted distributed control bot network
+botnet node	coordinated automation participant
+remote access trojan	remote-administration persistence utility
+remote access tool	remote administration utility
+kernel	runtime-boundary
+dangerous-tool.bat	bunnies.bat
+virus.txt	candy-bars.txt
+command-and-control infrastructure	remote coordination infrastructure
+identity confusion	identity-context ambiguity workflow
+unsafe patching	unsafe code-update practice
+forged certificate	unauthenticated certificate artifact
+stolen credentials	credential material capture event
+stolen token	token-compromise event
+code execution	runtime code execution pathway
+command execution	command execution workflow
+script execution	script execution workflow
+shell injection	shell-injection workflow
+directory traversal	filesystem-traversal pattern
+broken authentication	authentication-control failure
+broken access control	access-control failure pattern
+insecure input validation	insufficient input-validation control
+insecure file upload	unsafe file-upload workflow
+IDOR	direct-object access-control boundary issue
+insecure direct object reference	insecure object-identifier access pattern
+open admin interface	unrestricted administrative interface
+unprotected admin interface	unprotected administrative interface
+unauthorized admin	unauthorized privileged account event
+insecure default	insecure default configuration state
+weak authentication	weak authentication control
+weak credential policy	weak credential policy workflow
+default password	default-credential usage pattern
+hardcoded password	hardcoded credential usage pattern
+security patch bypass	security-update bypass behavior
+exposed debug endpoint	debug endpoint exposure pattern
+exposed debug interface	debug-interface exposure pattern
+open CORS	broad cross-origin policy
+open API	unrestricted API exposure
+token replay	token replay misuse pattern
+credential replay	credential reuse replay pattern
+privilege creep	privilege-expansion trend
+policy misconfiguration	policy-misconfiguration condition
+permission escalation	permission-expansion attempt
+CORS misconfiguration	cross-origin policy misconfiguration
+access control failure	access-control failure pattern
+attack vector	attack-route pattern
+attack surface	exposure surface profile
+compromised host	unauthorized host state
+compromised endpoint	unauthorized endpoint state
+compromised account	unauthorized account-control state
+credential policy	credential-policy control profile
+exposed configuration	configuration disclosure pattern
+network pivot	network traversal workflow
+infrastructure pivot	infrastructure traversal pattern
+control-plane compromise	control-plane integrity incident
+policy exception	policy-override handling path
+authorization failure	authorization failure path
+authorization boundary	authorization boundary context
+privilege boundary	permission-boundary context
+command and control path	command-control channel
+command channel	command-control channel
+endpoint compromise	endpoint-control compromise workflow
+service disruption event	service continuity impact event
+secret exposure	secret exposure event
+secret leakage	credential-key exposure event
+identity compromise	identity-state compromise
+compromised token	credential-token compromise state
+account lockout	account-lockout safety event
+policy override	policy-override handling path
+suspicious login	anomalous sign-on workflow
+anomalous authentication	unusual authentication pattern
+unauthorized login	unapproved authentication attempt
+brute force attack	high-volume authentication-attempt workflow
+password brute-force	authentication rate-limit test workflow
+credential spray	credential-guessing spray pattern
+account probing	account-namespace probing workflow
+API misuse	application-interface misuse pattern
+endpoint compromise indicator	endpoint compromise signal
+suspicious network telemetry	unusual network telemetry pattern
+anomalous network flow	nonstandard network-flow pattern
+suspicious outbound traffic	unusual outbound-traffic pattern
+unusual outbound traffic	unusual outbound-traffic pattern
+staged data staging	unstable intermediate-data staging workflow
+data staging area leak	intermediate-data-exposure workflow
+secrets scanning	secret-search scan workflow
+credentials in logs	credential material in logs exposure
+secret in logs	secret material in logs exposure
+exposed credentials	credential-exposure event
+exposed API key	service-key exposure pattern
+exposed endpoint	publicly exposed endpoint
+open endpoint	publicly exposed endpoint
+hardcoded password hash	hardcoded password-hash artifact
+weak API permission	insufficient API-permission control
+excessive privilege	permission-expansion trend
+least privilege violation	privilege-boundary control weakness
+access control flaw	access-control design weakness
+policy enforcement failure	policy-enforcement failure condition
+authorization loophole	authorization-gap condition
+permission boundary bypass	permission-boundary bypass event
+process injection attempt	process insertion attempt pattern
+code injection attempt	untrusted code-construction attempt
+script execution attempt	untrusted script execution attempt
+shell access attempt	unapproved shell-access attempt
+unauthorized shell access	unapproved shell-access event
+lateral service access	cross-service movement pattern
+host-to-host transfer	cross-host transfer pattern
+lateral network movement	cross-network movement pathway
+network traversal	network-segmentation traversal pattern
+credential interception	credential material interception pattern
+session abuse	session-control misuse pattern
+hijacked session	session-control takeover workflow
+API token theft	API token-compromise event
+password hash dump	hash-store extraction pattern
+password hash leak	hash-material exposure pattern
+secret key exposure	credential-key exposure event
+cryptographic failure	cryptographic-control failure
+unpatched critical flaw	unpatched critical vulnerability window
+stale credentials	retired credential reuse risk
+session timeout override	session-timeout override attempt
+privileged account misuse	privileged-account control misuse
+administrative account abuse	administrative-account control misuse
+endpoint tampering	endpoint-state modification attempt
+integrity check failure	integrity-validation failure event
+unauthorized data collection	unapproved data-collection workflow
+sensitive data mining	sensitive-data harvesting workflow
+data exfiltration attempt	unauthorized outbound data transfer attempt
+large outbound transfer	high-volume outbound transfer pattern
+covert tunnel	covert transport tunnel
+command callback	remote-coordination callback signal
+C2 beacon	remote-coordination callback pattern
+remote maintenance channel	managed remote-administration channel
+DNS beacon	DNS query signaling pattern
+DNS tunneling	DNS transport-channel covert pattern
+cloud storage exposure	cloud-storage exposure condition
+exposed storage bucket	exposed cloud-storage container
+public bucket	public cloud-storage container
+container runtime escape	runtime-isolation boundary egress pattern
+namespace breakout	namespace-boundary traversal pattern
+namespace escape	container-namespace boundary egress pattern
+host compromise indicator	unauthorized host signal
+malware persistence	persistent untrusted process pattern
+suspicious process	untrusted process-behavior signal
+unsigned executable	unverified executable artifact
+suspicious binary	untrusted executable artifact
+suspicious package	untrusted package artifact
+suspicious dependency	untrusted dependency component
+dependency vulnerability	dependency security weakness
+dependency risk review	dependency-risk review workflow
+supply chain risk	supply-path risk context
+package integrity failure	package integrity validation failure
+tamper evidence	tamper-evidence signal
+unauthorized package update	unapproved dependency update event
+unauthorized commit	unapproved source-history commit event
+
+# gpu-compiler
+GPU perf	GPU performance
+GPU mem	GPU memory
+HIP VMM	HIP virtual memory management
+RGA report	Radeon GPU Analyzer (RGA) report
+SGPR count	scalar general-purpose register (SGPR) count
+VGPR count	vector general-purpose register (VGPR) count
+ISA listing	instruction-set architecture (ISA) listing
+shmem reduction	shared-memory reduction
+FP6 format	six-bit floating-point (FP6) format
+FP8 format	eight-bit floating-point (FP8) format
+Q6 quantization	six-bit (Q6) quantization

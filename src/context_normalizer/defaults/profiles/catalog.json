@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "default": "software-writing-expansions",
+  "profiles": [
+    {
+      "name": "software-writing-expansions",
+      "description": "Conservative software-writing expansions for readability and unambiguous prose."
+    },
+    {
+      "name": "life-science-writing-expansions",
+      "description": "Conservative life-science writing expansions for readability and unambiguous prose."
+    },
+    {
+      "name": "security-writing-expansions",
+      "description": "Conservative security-facing writing expansions for clarity and safer phrasing."
+    },
+    {
+      "name": "gpu-compiler",
+      "description": "Conservative GPU and compiler shorthand expansions for readability in performance-engineering prose."
+    }
+  ]
+}

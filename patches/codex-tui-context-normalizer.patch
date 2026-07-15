@@ -1,0 +1,247 @@
+diff --git a/codex-rs/tui/src/lib.rs b/codex-rs/tui/src/lib.rs
+index 23d7f24..27cfbed 100644
+--- a/codex-rs/tui/src/lib.rs
++++ b/codex-rs/tui/src/lib.rs
+@@ -104,3 +104,4 @@ mod collaboration_modes;
+ mod color;
+ mod config_update;
++mod context_normalizer;
+ pub(crate) mod custom_terminal;
+diff --git a/codex-rs/tui/src/context_normalizer.rs b/codex-rs/tui/src/context_normalizer.rs
+new file mode 100644
+index 0000000..ea9b2b1
+--- /dev/null
++++ b/codex-rs/tui/src/context_normalizer.rs
+@@ -0,0 +1,166 @@
++use std::ffi::OsString;
++use std::io::Write;
++use std::process::Command;
++use std::process::Stdio;
++
++const PROGRAM_ENV: &str = "CODEX_CONTEXT_NORMALIZER_PROGRAM";
++const ARGS_ENV: &str = "CODEX_CONTEXT_NORMALIZER_ARGS_JSON";
++const COMPLETE_ARGS_ENV: &str = "CODEX_CONTEXT_NORMALIZER_COMPLETE_ARGS_JSON";
++const MAX_NORMALIZED_BYTES: usize = 4 * 1024 * 1024;
++
++pub(crate) fn is_enabled() -> bool {
++    std::env::var_os(PROGRAM_ENV).is_some()
++}
++
++pub(crate) fn normalize_user_text(text: &str) -> Result<String, String> {
++    let Some(program) = std::env::var_os(PROGRAM_ENV) else {
++        return Ok(text.to_string());
++    };
++    if text.is_empty() {
++        return Ok(String::new());
++    }
++
++    let args_json = std::env::var(ARGS_ENV).unwrap_or_else(|_| "[]".to_string());
++    let args: Vec<OsString> = serde_json::from_str::<Vec<String>>(&args_json)
++        .map_err(|error| format!("{ARGS_ENV} must be a JSON string array: {error}"))?
++        .into_iter()
++        .map(OsString::from)
++        .collect();
++
++    let mut child = Command::new(program)
++        .args(args)
++        .stdin(Stdio::piped())
++        .stdout(Stdio::piped())
++        .stderr(Stdio::piped())
++        .spawn()
++        .map_err(|error| format!("failed to start context normalizer: {error}"))?;
++
++    {
++        let mut stdin = child
++            .stdin
++            .take()
++            .ok_or_else(|| "context normalizer stdin was unavailable".to_string())?;
++        stdin
++            .write_all(text.as_bytes())
++            .map_err(|error| format!("failed to write context normalizer input: {error}"))?;
++    }
++
++    let output = child
++        .wait_with_output()
++        .map_err(|error| format!("failed to read context normalizer output: {error}"))?;
++    validate_output(text, output.status.success(), output.stdout, output.stderr)
++}
++
++pub(crate) fn complete_turn() -> Result<(), String> {
++    let Some(program) = std::env::var_os(PROGRAM_ENV) else {
++        return Ok(());
++    };
++    let args_json = std::env::var(COMPLETE_ARGS_ENV).unwrap_or_else(|_| "[]".to_string());
++    let args: Vec<OsString> = serde_json::from_str::<Vec<String>>(&args_json)
++        .map_err(|error| format!("{COMPLETE_ARGS_ENV} must be a JSON string array: {error}"))?
++        .into_iter()
++        .map(OsString::from)
++        .collect();
++    let output = Command::new(program)
++        .args(args)
++        .stdin(Stdio::null())
++        .stdout(Stdio::piped())
++        .stderr(Stdio::piped())
++        .output()
++        .map_err(|error| format!("failed to start context normalizer completion: {error}"))?;
++    validate_completion_output(output.status.success(), output.stdout, output.stderr)
++}
++
++fn validate_completion_output(
++    success: bool,
++    stdout: Vec<u8>,
++    stderr: Vec<u8>,
++) -> Result<(), String> {
++    if !success {
++        let detail = String::from_utf8_lossy(&stderr).trim().to_string();
++        return Err(if detail.is_empty() {
++            "context normalizer completion exited unsuccessfully".to_string()
++        } else {
++            format!("context normalizer completion failed: {detail}")
++        });
++    }
++    if stdout.len() > MAX_NORMALIZED_BYTES {
++        return Err(format!(
++            "context normalizer completion output exceeded {MAX_NORMALIZED_BYTES} bytes"
++        ));
++    }
++    Ok(())
++}
++
++fn validate_output(
++    input: &str,
++    success: bool,
++    stdout: Vec<u8>,
++    stderr: Vec<u8>,
++) -> Result<String, String> {
++    if !success {
++        let detail = String::from_utf8_lossy(&stderr).trim().to_string();
++        return Err(if detail.is_empty() {
++            "context normalizer exited unsuccessfully".to_string()
++        } else {
++            format!("context normalizer failed: {detail}")
++        });
++    }
++    if stdout.len() > MAX_NORMALIZED_BYTES {
++        return Err(format!(
++            "context normalizer output exceeded {MAX_NORMALIZED_BYTES} bytes"
++        ));
++    }
++    let normalized = String::from_utf8(stdout)
++        .map_err(|_| "context normalizer output was not UTF-8".to_string())?;
++    if !input.is_empty() && normalized.is_empty() {
++        return Err("context normalizer returned empty output".to_string());
++    }
++    if normalized.contains('\0') {
++        return Err("context normalizer output contained a NUL byte".to_string());
++    }
++    Ok(normalized)
++}
++
++#[cfg(test)]
++mod tests {
++    use super::*;
++
++    #[test]
++    fn accepts_changed_text() {
++        let normalized = validate_output(
++            "remote access tool",
++            true,
++            b"remote administration utility".to_vec(),
++            Vec::new(),
++        )
++        .expect("changed text should be accepted");
++        assert_eq!(normalized, "remote administration utility");
++    }
++
++    #[test]
++    fn rejects_empty_output_for_nonempty_input() {
++        let error = validate_output("source", true, Vec::new(), Vec::new())
++            .expect_err("empty output must fail closed");
++        assert_eq!(error, "context normalizer returned empty output");
++    }
++
++    #[test]
++    fn reports_child_failure_without_using_stdout() {
++        let error = validate_output(
++            "source",
++            false,
++            b"unsafe fallback".to_vec(),
++            b"bad rules".to_vec(),
++        )
++        .expect_err("failed child must fail closed");
++        assert_eq!(error, "context normalizer failed: bad rules");
++    }
++
++    #[test]
++    fn reports_completion_failure() {
++        let error = validate_completion_output(false, Vec::new(), b"sync conflict".to_vec())
++            .expect_err("failed completion must be reported");
++        assert_eq!(error, "context normalizer completion failed: sync conflict");
++    }
++}
+diff --git a/codex-rs/tui/src/chatwidget/turn_runtime.rs b/codex-rs/tui/src/chatwidget/turn_runtime.rs
+--- a/codex-rs/tui/src/chatwidget/turn_runtime.rs
++++ b/codex-rs/tui/src/chatwidget/turn_runtime.rs
+@@ -93,6 +93,12 @@ impl ChatWidget {
+         last_agent_message: Option<String>,
+         duration_ms: Option<i64>,
+         from_replay: bool,
+     ) {
++        if !from_replay
++            && crate::context_normalizer::is_enabled()
++            && let Err(error) = crate::context_normalizer::complete_turn()
++        {
++            self.add_error_message(format!("Context normalization completion failed: {error}"));
++        }
+         self.input_queue.submit_pending_steers_after_interrupt = false;
+         // Use `last_agent_message` from the turn-complete notification as the copy
+diff --git a/codex-rs/tui/src/chatwidget/input_submission.rs b/codex-rs/tui/src/chatwidget/input_submission.rs
+index eb0c493..55e8ee3 100644
+--- a/codex-rs/tui/src/chatwidget/input_submission.rs
++++ b/codex-rs/tui/src/chatwidget/input_submission.rs
+@@ -139,6 +139,6 @@ impl ChatWidget {
+         }
+         let UserMessage {
+-            text,
++            mut text,
+             local_images,
+             remote_image_urls,
+             text_elements,
+@@ -161,6 +161,37 @@ impl ChatWidget {
+             return (app_command.is_some(), app_command);
+         }
+ 
++        if crate::context_normalizer::is_enabled() {
++            if !text_elements.is_empty() {
++                self.restore_blocked_image_submission(
++                    text,
++                    text_elements,
++                    local_images,
++                    mention_bindings,
++                    remote_image_urls,
++                );
++                self.add_error_message(
++                    "Context normalization cannot yet remap structured text elements. Draft restored."
++                        .to_string(),
++                );
++                return (false, None);
++            }
++            match crate::context_normalizer::normalize_user_text(&text) {
++                Ok(normalized) => text = normalized,
++                Err(error) => {
++                    self.restore_blocked_image_submission(
++                        text,
++                        text_elements,
++                        local_images,
++                        mention_bindings,
++                        remote_image_urls,
++                    );
++                    self.add_error_message(format!("Context normalization failed: {error}"));
++                    return (false, None);
++                }
++            }
++        }
++
+         for image_url in &remote_image_urls {
+             items.push(UserInput::Image {
+                 url: image_url.clone(),

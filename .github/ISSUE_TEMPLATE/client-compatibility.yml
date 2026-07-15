@@ -1,0 +1,24 @@
+name: Client compatibility
+description: Report a Codex or Pi integration compatibility change
+title: "[Compatibility]: "
+labels: [compatibility]
+body:
+  - type: dropdown
+    id: client
+    attributes:
+      label: Client
+      options: [Codex, Pi]
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Client, component, core, Python, and operating-system versions
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed normalization behavior and redacted diagnostics
+    validations:
+      required: true

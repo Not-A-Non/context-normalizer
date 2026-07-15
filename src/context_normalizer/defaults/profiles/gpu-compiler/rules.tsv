@@ -1,0 +1,14 @@
+# Context-normalization mappings for gpu-compiler in automatic mode.
+# Merged from bundled profile guidance and topic-specific alternatives.
+
+GPU perf	GPU performance
+GPU mem	GPU memory
+HIP VMM	HIP virtual memory management
+RGA report	Radeon GPU Analyzer (RGA) report
+SGPR count	scalar general-purpose register (SGPR) count
+VGPR count	vector general-purpose register (VGPR) count
+ISA listing	instruction-set architecture (ISA) listing
+shmem reduction	shared-memory reduction
+FP6 format	six-bit floating-point (FP6) format
+FP8 format	eight-bit floating-point (FP8) format
+Q6 quantization	six-bit (Q6) quantization

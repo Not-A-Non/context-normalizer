@@ -1,0 +1,358 @@
+diff --git a/codex-rs/tui/src/chatwidget/command_lifecycle.rs b/codex-rs/tui/src/chatwidget/command_lifecycle.rs
+index 8e6630f..00da524 100644
+--- a/codex-rs/tui/src/chatwidget/command_lifecycle.rs
++++ b/codex-rs/tui/src/chatwidget/command_lifecycle.rs
+@@ -17,7 +17,18 @@ impl ChatWidget {
+         self.restore_reasoning_status_header();
+     }
+ 
+-    pub(super) fn on_command_execution_started(&mut self, item: ThreadItem) {
++    pub(super) fn on_command_execution_started(&mut self, mut item: ThreadItem) {
++        if crate::context_normalizer::is_enabled()
++            && let ThreadItem::CommandExecution { command, .. } = &mut item
++        {
++            match crate::context_normalizer::normalize_display_text(command) {
++                Ok(normalized) => *command = normalized,
++                Err(error) => {
++                    self.add_error_message(format!("Context normalization failed: {error}"));
++                    return;
++                }
++            }
++        }
+         let ThreadItem::CommandExecution {
+             id,
+             command,
+@@ -52,6 +63,9 @@ impl ChatWidget {
+     }
+ 
+     pub(super) fn on_exec_command_output_delta(&mut self, call_id: &str, delta: &str) {
++        if crate::context_normalizer::is_enabled() {
++            return;
++        }
+         self.track_unified_exec_output_chunk(call_id, delta.as_bytes());
+         if !self.bottom_pane.is_task_running() {
+             return;
+@@ -320,7 +334,7 @@ impl ChatWidget {
+     /// standalone history entry instead of replacing or flushing the unrelated active exploring
+     /// cell. If this method treated every unknown end as "complete the active cell", the UI could
+     /// merge unrelated commands and hide still-running exploring work.
+-    pub(crate) fn handle_command_execution_completed_now(&mut self, item: ThreadItem) {
++    pub(crate) fn handle_command_execution_completed_now(&mut self, mut item: ThreadItem) {
+         enum ExecEndTarget {
+             // Normal case: the active exec cell already tracks this call id.
+             ActiveTracked,
+@@ -331,6 +345,30 @@ impl ChatWidget {
+             NewCell,
+         }
+ 
++        if crate::context_normalizer::is_enabled()
++            && let ThreadItem::CommandExecution {
++                command,
++                aggregated_output,
++                ..
++            } = &mut item
++        {
++            let normalized_command = crate::context_normalizer::normalize_display_text(command);
++            let normalized_output = aggregated_output
++                .as_deref()
++                .map(crate::context_normalizer::normalize_display_text)
++                .transpose();
++            match (normalized_command, normalized_output) {
++                (Ok(command_text), Ok(output_text)) => {
++                    *command = command_text;
++                    *aggregated_output = output_text;
++                }
++                (Err(error), _) | (_, Err(error)) => {
++                    self.add_error_message(format!("Context normalization failed: {error}"));
++                    return;
++                }
++            }
++        }
++
+         let ThreadItem::CommandExecution {
+             id,
+             command,
+diff --git a/codex-rs/tui/src/chatwidget/input_submission.rs b/codex-rs/tui/src/chatwidget/input_submission.rs
+index da2207d..76f9ea7 100644
+--- a/codex-rs/tui/src/chatwidget/input_submission.rs
++++ b/codex-rs/tui/src/chatwidget/input_submission.rs
+@@ -138,7 +138,7 @@ impl ChatWidget {
+             return (false, None);
+         }
+         let UserMessage {
+-            text,
++            mut text,
+             local_images,
+             remote_image_urls,
+             text_elements,
+@@ -161,6 +161,37 @@ impl ChatWidget {
+             return (app_command.is_some(), app_command);
+         }
+ 
++        if crate::context_normalizer::is_enabled() {
++            if !text_elements.is_empty() {
++                self.restore_blocked_image_submission(
++                    text,
++                    text_elements,
++                    local_images,
++                    mention_bindings,
++                    remote_image_urls,
++                );
++                self.add_error_message(
++                    "Context normalization cannot yet remap structured text elements. Draft restored."
++                        .to_string(),
++                );
++                return (false, None);
++            }
++            match crate::context_normalizer::normalize_user_text(&text) {
++                Ok(normalized) => text = normalized,
++                Err(error) => {
++                    self.restore_blocked_image_submission(
++                        text,
++                        text_elements,
++                        local_images,
++                        mention_bindings,
++                        remote_image_urls,
++                    );
++                    self.add_error_message(format!("Context normalization failed: {error}"));
++                    return (false, None);
++                }
++            }
++        }
++
+         for image_url in &remote_image_urls {
+             items.push(UserInput::Image {
+                 url: image_url.clone(),
+diff --git a/codex-rs/tui/src/chatwidget/streaming.rs b/codex-rs/tui/src/chatwidget/streaming.rs
+index f8b0124..8034716 100644
+--- a/codex-rs/tui/src/chatwidget/streaming.rs
++++ b/codex-rs/tui/src/chatwidget/streaming.rs
+@@ -109,6 +109,9 @@ impl ChatWidget {
+     }
+ 
+     pub(super) fn on_agent_message_delta(&mut self, delta: String) {
++        if crate::context_normalizer::is_enabled() {
++            return;
++        }
+         self.handle_streaming_delta(delta);
+     }
+ 
+@@ -274,6 +277,15 @@ impl ChatWidget {
+                 AgentMessageContent::Text { text } => message.push_str(text),
+             }
+         }
++        if crate::context_normalizer::is_enabled() {
++            match crate::context_normalizer::normalize_display_text(&message) {
++                Ok(normalized) => message = normalized,
++                Err(error) => {
++                    self.add_error_message(format!("Context normalization failed: {error}"));
++                    return;
++                }
++            }
++        }
+         let parsed = parse_assistant_markdown(&message, self.config.cwd.as_path());
+         self.finalize_completed_assistant_message(
+             (!parsed.visible_markdown.is_empty()).then_some(parsed.visible_markdown.as_str()),
+diff --git a/codex-rs/tui/src/chatwidget/turn_runtime.rs b/codex-rs/tui/src/chatwidget/turn_runtime.rs
+index d71a608..5029bbe 100644
+--- a/codex-rs/tui/src/chatwidget/turn_runtime.rs
++++ b/codex-rs/tui/src/chatwidget/turn_runtime.rs
+@@ -95,12 +95,33 @@ impl ChatWidget {
+         duration_ms: Option<i64>,
+         from_replay: bool,
+     ) {
++        if !from_replay
++            && crate::context_normalizer::is_enabled()
++            && let Err(error) = crate::context_normalizer::complete_turn()
++        {
++            self.add_error_message(format!("Context normalization completion failed: {error}"));
++        }
++        let display_last_agent_message = if crate::context_normalizer::is_enabled() {
++            match last_agent_message
++                .as_deref()
++                .map(crate::context_normalizer::normalize_display_text)
++                .transpose()
++            {
++                Ok(value) => value,
++                Err(error) => {
++                    self.add_error_message(format!("Context normalization failed: {error}"));
++                    None
++                }
++            }
++        } else {
++            last_agent_message
++        };
+         self.input_queue.submit_pending_steers_after_interrupt = false;
+         // Use `last_agent_message` from the turn-complete notification as the copy
+         // source only when no earlier item-level event (AgentMessageItem, plan
+         // commit, review output) already recorded markdown for this turn. This
+         // prevents the final summary from overwriting a more specific source.
+-        let sanitized_last_agent_message = last_agent_message.as_deref().map(|message| {
++        let sanitized_last_agent_message = display_last_agent_message.as_deref().map(|message| {
+             parse_assistant_markdown(message, self.config.cwd.as_path()).visible_markdown
+         });
+         if let Some(message) = sanitized_last_agent_message
+diff --git a/codex-rs/tui/src/context_normalizer.rs b/codex-rs/tui/src/context_normalizer.rs
+new file mode 100644
+index 0000000..bc02b19
+--- /dev/null
++++ b/codex-rs/tui/src/context_normalizer.rs
+@@ -0,0 +1,146 @@
++use std::io::Write;
++use std::path::Path;
++use std::process::Command;
++use std::process::Stdio;
++
++const WORKSPACE_MARKER: &str = ".ctxnorm-workspace.json";
++const MAX_NORMALIZED_BYTES: usize = 4 * 1024 * 1024;
++
++pub(crate) fn is_enabled() -> bool {
++    Path::new(WORKSPACE_MARKER).is_file()
++}
++
++pub(crate) fn normalize_user_text(text: &str) -> Result<String, String> {
++    run(&["bridge", "submit"], text)
++}
++
++pub(crate) fn normalize_display_text(text: &str) -> Result<String, String> {
++    run(&["bridge", "normalize", "--direction", "display"], text)
++}
++
++pub(crate) fn complete_turn() -> Result<(), String> {
++    if !is_enabled() {
++        return Ok(());
++    }
++    let output = Command::new("ctxnorm")
++        .args(["bridge", "complete"])
++        .stdin(Stdio::null())
++        .stdout(Stdio::piped())
++        .stderr(Stdio::piped())
++        .output()
++        .map_err(|error| format!("failed to start ctxnorm: {error}"))?;
++    validate_completion_output(output.status.success(), output.stdout, output.stderr)
++}
++
++fn run(arguments: &[&str], input: &str) -> Result<String, String> {
++    if !is_enabled() || input.is_empty() {
++        return Ok(input.to_string());
++    }
++    let mut child = Command::new("ctxnorm")
++        .args(arguments)
++        .stdin(Stdio::piped())
++        .stdout(Stdio::piped())
++        .stderr(Stdio::piped())
++        .spawn()
++        .map_err(|error| format!("failed to start ctxnorm: {error}"))?;
++    {
++        let mut stdin = child
++            .stdin
++            .take()
++            .ok_or_else(|| "ctxnorm stdin was unavailable".to_string())?;
++        stdin
++            .write_all(input.as_bytes())
++            .map_err(|error| format!("failed to send text to ctxnorm: {error}"))?;
++    }
++    let output = child
++        .wait_with_output()
++        .map_err(|error| format!("failed to read ctxnorm output: {error}"))?;
++    validate_output(input, output.status.success(), output.stdout, output.stderr)
++}
++
++fn validate_completion_output(
++    success: bool,
++    stdout: Vec<u8>,
++    stderr: Vec<u8>,
++) -> Result<(), String> {
++    if !success {
++        let detail = String::from_utf8_lossy(&stderr).trim().to_string();
++        return Err(if detail.is_empty() {
++            "ctxnorm completion was unsuccessful".to_string()
++        } else {
++            detail
++        });
++    }
++    if stdout.len() > MAX_NORMALIZED_BYTES {
++        return Err(format!(
++            "ctxnorm completion output exceeded {MAX_NORMALIZED_BYTES} bytes"
++        ));
++    }
++    Ok(())
++}
++
++fn validate_output(
++    input: &str,
++    success: bool,
++    stdout: Vec<u8>,
++    stderr: Vec<u8>,
++) -> Result<String, String> {
++    if !success {
++        let detail = String::from_utf8_lossy(&stderr).trim().to_string();
++        return Err(if detail.is_empty() {
++            "ctxnorm was unsuccessful".to_string()
++        } else {
++            detail
++        });
++    }
++    if stdout.len() > MAX_NORMALIZED_BYTES {
++        return Err(format!(
++            "ctxnorm output exceeded {MAX_NORMALIZED_BYTES} bytes"
++        ));
++    }
++    let normalized =
++        String::from_utf8(stdout).map_err(|_| "ctxnorm output was not UTF-8".to_string())?;
++    if !input.is_empty() && normalized.is_empty() {
++        return Err("ctxnorm returned empty text".to_string());
++    }
++    if normalized.contains('\0') {
++        return Err("ctxnorm output contained a NUL byte".to_string());
++    }
++    Ok(normalized)
++}
++
++#[cfg(test)]
++mod tests {
++    use super::*;
++
++    #[test]
++    fn accepts_normalized_text() {
++        let normalized = validate_output(
++            "source vocabulary",
++            true,
++            b"normalized vocabulary".to_vec(),
++            Vec::new(),
++        )
++        .expect("normalized text should be accepted");
++        assert_eq!(normalized, "normalized vocabulary");
++    }
++
++    #[test]
++    fn rejects_empty_output_for_nonempty_input() {
++        let error = validate_output("source", true, Vec::new(), Vec::new())
++            .expect_err("empty output must fail closed");
++        assert_eq!(error, "ctxnorm returned empty text");
++    }
++
++    #[test]
++    fn reports_child_failure_without_using_stdout() {
++        let error = validate_output(
++            "source",
++            false,
++            b"unused output".to_vec(),
++            b"invalid vocabulary".to_vec(),
++        )
++        .expect_err("failed child must fail closed");
++        assert_eq!(error, "invalid vocabulary");
++    }
++}
+diff --git a/codex-rs/tui/src/lib.rs b/codex-rs/tui/src/lib.rs
+index dc8262f..bcbac18 100644
+--- a/codex-rs/tui/src/lib.rs
++++ b/codex-rs/tui/src/lib.rs
+@@ -103,6 +103,7 @@ mod clipboard_paste;
+ mod collaboration_modes;
+ mod color;
+ mod config_update;
++mod context_normalizer;
+ pub(crate) mod custom_terminal;
+ mod pets;
+ pub use custom_terminal::Terminal;

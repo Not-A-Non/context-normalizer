@@ -1,0 +1,30 @@
+{
+  "name": "context-normalizer-pi",
+  "version": "1.0.0",
+  "description": "Vocabulary and context normalization for Pi",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY-NOTICES.md",
+    "install.ps1",
+    "install.sh",
+    "uninstall.ps1",
+    "uninstall.sh",
+    "verify.ps1",
+    "verify.sh"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "pi": {
+    "extensions": [
+      "extensions/context-normalizer.mjs"
+    ]
+  },
+  "scripts": {
+    "test": "node test/context-normalizer.test.mjs"
+  }
+}

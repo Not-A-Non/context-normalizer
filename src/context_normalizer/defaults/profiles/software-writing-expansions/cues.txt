@@ -1,0 +1,88 @@
+# Software - testing and delivery
+repro steps
+perf regression
+E2E test
+OOM error
+CI pipeline
+CI run
+pipeline run
+unit test
+integration test
+regression test
+smoke test
+trigger the CI build
+fault injection test
+build failure
+build artifact
+build script
+build target
+branch protection
+
+# Software - architecture and interfaces
+PR review
+API endpoint
+CLI command
+DB query
+UI component
+repo root
+prod environment
+dev environment
+config file
+env var
+package deps
+branch pointer
+worker node
+runtime execution externally initiated
+
+# Software - execution and workflow control
+backdoor access
+kill the worker process
+terminate process
+process termination
+spawn thread
+spawn process
+kill switch
+manual override
+rollback
+revert commit
+
+# Software - request and message phrasing
+HTTP request payload
+event payload
+data payload
+request payload
+inference payload
+payload
+payload checksum
+request body
+response payload
+
+# Software - reliability and diagnostics
+harvest cells
+debug hook
+hook into
+lifecycle hook
+test sandbox
+harden the configuration
+service mesh policy
+credential leakage
+root access
+execute command
+shell command
+run executable
+memory corruption
+thread dump
+core dump
+crash report
+segmentation fault
+stack overflow
+deadlock
+race condition
+thread starvation
+root shell
+daemon restart
+service restart
+cache miss
+rate limit
+queue depth
+process dump

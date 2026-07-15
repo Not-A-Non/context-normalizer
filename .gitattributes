@@ -1,0 +1,14 @@
+* text=auto
+*.cmd text eol=crlf
+*.json text eol=lf
+*.md text eol=lf
+*.mjs text eol=lf
+*.patch text eol=lf
+*.patch whitespace=-blank-at-eol
+*.ps1 text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.toml text eol=lf
+*.tsv text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf

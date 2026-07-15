@@ -1,0 +1,91 @@
+# Context-normalization mappings for software-writing-expansions in automatic mode.
+# Merged from bundled profile guidance and topic-specific alternatives.
+
+# Software - testing and delivery
+repro steps	reproduction steps
+perf regression	performance regression
+E2E test	end-to-end (E2E) test
+OOM error	out-of-memory (OOM) error
+CI pipeline	continuous integration (CI) pipeline
+CI run	continuous integration run
+pipeline run	integration pipeline run
+unit test	unit test execution
+integration test	integration test execution
+regression test	regression test execution
+smoke test	smoke-validation test
+trigger the CI build	start the automated validation pipeline
+build failure	build execution failure analysis
+fault injection test	controlled fault-simulation test
+build artifact	build output artifact
+build target	build output artifact target
+build script	build orchestration script
+
+# Software - architecture and interfaces
+PR review	pull request (PR) review
+API endpoint	application programming interface (API) endpoint
+CLI command	command-line interface (CLI) command
+DB query	database query
+UI component	user interface (UI) component
+repo root	repository root
+prod environment	production environment
+dev environment	development environment
+config file	configuration file
+env var	environment variable
+package deps	package dependencies
+branch pointer	repository branch pointer
+branch protection	branch-protection policy
+worker node	processing node
+service mesh policy	control-plane policy
+
+# Software - execution and workflow control
+kill the worker process	stop the worker process task
+terminate process	stop process activity
+process termination	requested process shutdown workflow
+spawn thread	thread creation workflow
+spawn process	process launch workflow
+kill switch	control disable control
+manual override	operator override path
+rollback	configuration rollback
+revert commit	rollback change set
+runtime execution externally initiated	run request from external orchestrator
+root access	root-level access path
+backdoor access	maintenance access path
+
+# Software - request and message phrasing
+HTTP request payload	HTTP request message-body data
+event payload	event message data
+data payload	data message body
+request payload	request data body
+inference payload	inference request package
+payload	request-body data segment
+payload checksum	payload integrity value
+request body	request-body segment
+response payload	response message-body data
+
+# Software - reliability and diagnostics
+harvest cells	collect cells from sample
+hook into	the callback attachment pattern
+lifecycle hook	lifecycle callback routine
+test sandbox	isolated test environment
+harden the configuration	strengthen the security configuration controls
+debug hook	tracing callback point
+execute command	execute operation command
+shell command	line-interface command
+root shell	elevated shell session
+run executable	run executable module
+memory corruption	memory integrity issue
+thread dump	thread snapshot
+core dump	core-dump report
+process dump	process state snapshot
+credential leakage	credential exposure event
+crash report	failure report artifact
+segmentation fault	run-time memory-boundary fault report
+stack overflow	memory-stack boundary overflow condition
+deadlock	concurrent process-blocking state
+race condition	concurrent timing condition
+thread starvation	worker-thread scheduling starvation state
+daemon restart	service-daemon restart workflow
+service restart	service restart workflow
+cache miss	cache-miss condition
+rate limit	rate-control threshold workflow
+queue depth	workload queue-depth signal
